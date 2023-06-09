@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		048C57B266DB3C358998061829E47E19 /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EBD74196CDAC2E4FFCC6192729FBBB /* HTTPContentType.swift */; };
+		0A781FCFDD725B8A0CFA6351ACB04110 /* BuckarooBanzai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE0D459779D82190580BE9E9BEE83F /* BuckarooBanzai.swift */; };
+		2B44C9D2DEF374CEDE1BAE933C25B641 /* BuckarooBanzai-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE272C487D10B367C476AE3D6EEB5CE /* BuckarooBanzai-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C482491C7DDDC0B8CC6FBA2FA463085 /* Pods-ibotta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C4FF33FEDB6151F5C6C4E1F0FF678E /* Pods-ibotta-dummy.m */; };
+		30558E1CFCB6F555845315C0F4F1733D /* JSONRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE32A5973E1735393EC015BE429C19 /* JSONRequestSerializer.swift */; };
+		609BED004A5C1DF65B6E12F3189001A3 /* FormRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24888F0F82FCC55204E338F900F17183 /* FormRequestSerializer.swift */; };
+		6F569422AAA6D584DCE4EAE3F37C5E1D /* BuckarooBanzai.h in Headers */ = {isa = PBXBuildFile; fileRef = 7772EF300C1512E8E55E3DAF4B851364 /* BuckarooBanzai.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89304E45D39B96C6D82EF5B7EDF16DB6 /* HTTPAcceptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9B9A6154713A194F105F5E7BB9B9C3 /* HTTPAcceptType.swift */; };
+		8A558DB8C08D95191D71FA6BA3EA30B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B71EED7AE726ADDD5F35250318046782 /* BBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6FB3C21A0894EA667A1D858217B77 /* BBError.swift */; };
+		C87044155D13655844E16219F51D5656 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9608ACC071EED950897572F35219B42 /* Service.swift */; };
+		DE83B6109BE0B95CF00998B2AF72CBBD /* BuckarooBanzai-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D68D2B92B5BDB8FDC4722CF491F4ED /* BuckarooBanzai-dummy.m */; };
+		DF669620718AF7892941B9A97601DCFC /* HTTPResponse+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A31207AA3B0DB2F752CB9C2FB4721 /* HTTPResponse+ext.swift */; };
+		DF8E1D034B8DB4B67243BFF15B3F9FFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E098C4F224ADC23C331DE09FB12F46EC /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C011A54ADD4B88726A70D61703939 /* HTTPResponse.swift */; };
+		E2E128E81FCCDEFB484943940A898216 /* Pods-ibotta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE72E8C9D1C67ECFCAD6FBE4D766DEAD /* Pods-ibotta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E74911B83CB6B62B7382A35659284358 /* HTTPRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C3281CC3640F642DDE09AA6C98E78D /* HTTPRequestMethod.swift */; };
+		EEF3719707D1035D4B284F29A1DEA8C0 /* RequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8AC438BEED03C51DECC44A879B8917 /* RequestSerializer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0043B7D0167080A36FCA164706D0F897 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 515F9B834A112BCA850AB763BFAD7B05;
+			remoteInfo = BuckarooBanzai;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0ECCDA745F5D3DAB647B6F95378A53A4 /* Pods-ibotta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ibotta.release.xcconfig"; sourceTree = "<group>"; };
+		1A9E2E13F267922302D13A08A0324CE7 /* BuckarooBanzai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BuckarooBanzai.debug.xcconfig; sourceTree = "<group>"; };
+		1F8FEEE91BC8009516C1CC953DE04A90 /* BuckarooBanzai */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BuckarooBanzai; path = BuckarooBanzai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24888F0F82FCC55204E338F900F17183 /* FormRequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormRequestSerializer.swift; path = BuckarooBanzai/Serializers/FormRequestSerializer.swift; sourceTree = "<group>"; };
+		2F94EA0EE4C94E42ACB56C9506EA60BC /* BuckarooBanzai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BuckarooBanzai.release.xcconfig; sourceTree = "<group>"; };
+		37C6FB3C21A0894EA667A1D858217B77 /* BBError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBError.swift; path = BuckarooBanzai/Enumerations/BBError.swift; sourceTree = "<group>"; };
+		45EBD74196CDAC2E4FFCC6192729FBBB /* HTTPContentType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPContentType.swift; path = BuckarooBanzai/Enumerations/HTTPContentType.swift; sourceTree = "<group>"; };
+		53AF9962E6EF35094E69B2566C2887FB /* Pods-ibotta-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ibotta-acknowledgements.plist"; sourceTree = "<group>"; };
+		564170D04FA623A96245D6F9BE428EBA /* Pods-ibotta-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ibotta-frameworks.sh"; sourceTree = "<group>"; };
+		61DE0D459779D82190580BE9E9BEE83F /* BuckarooBanzai.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BuckarooBanzai.swift; path = BuckarooBanzai/BuckarooBanzai.swift; sourceTree = "<group>"; };
+		71E7F14D622CB96AB7A5A37DF13EC207 /* Pods-ibotta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ibotta.debug.xcconfig"; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7772EF300C1512E8E55E3DAF4B851364 /* BuckarooBanzai.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BuckarooBanzai.h; path = BuckarooBanzai/BuckarooBanzai.h; sourceTree = "<group>"; };
+		7ED9C58994DE0AAA1B7BDA43D3C27505 /* BuckarooBanzai.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BuckarooBanzai.modulemap; sourceTree = "<group>"; };
+		8448FA66053432DE9D9F8557F4DB62CE /* BuckarooBanzai-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BuckarooBanzai-prefix.pch"; sourceTree = "<group>"; };
+		8BFCC664DA2527742D94DCF3C24A1B55 /* Pods-ibotta-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ibotta-Info.plist"; sourceTree = "<group>"; };
+		92C3281CC3640F642DDE09AA6C98E78D /* HTTPRequestMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPRequestMethod.swift; path = BuckarooBanzai/Enumerations/HTTPRequestMethod.swift; sourceTree = "<group>"; };
+		979A430AEC4A579DFC9B43F6F189A5EE /* Pods-ibotta-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ibotta-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E8AC438BEED03C51DECC44A879B8917 /* RequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestSerializer.swift; path = BuckarooBanzai/Protocols/RequestSerializer.swift; sourceTree = "<group>"; };
+		9EE272C487D10B367C476AE3D6EEB5CE /* BuckarooBanzai-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BuckarooBanzai-umbrella.h"; sourceTree = "<group>"; };
+		A9608ACC071EED950897572F35219B42 /* Service.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Service.swift; path = BuckarooBanzai/Protocols/Service.swift; sourceTree = "<group>"; };
+		AA9B9A6154713A194F105F5E7BB9B9C3 /* HTTPAcceptType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPAcceptType.swift; path = BuckarooBanzai/Enumerations/HTTPAcceptType.swift; sourceTree = "<group>"; };
+		BE72E8C9D1C67ECFCAD6FBE4D766DEAD /* Pods-ibotta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ibotta-umbrella.h"; sourceTree = "<group>"; };
+		C681D554B6A114E1A871A45664B67C20 /* BuckarooBanzai-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BuckarooBanzai-Info.plist"; sourceTree = "<group>"; };
+		C74C011A54ADD4B88726A70D61703939 /* HTTPResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPResponse.swift; path = "BuckarooBanzai/Data Structs/HTTPResponse.swift"; sourceTree = "<group>"; };
+		DAAE32A5973E1735393EC015BE429C19 /* JSONRequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONRequestSerializer.swift; path = BuckarooBanzai/Serializers/JSONRequestSerializer.swift; sourceTree = "<group>"; };
+		E85A31207AA3B0DB2F752CB9C2FB4721 /* HTTPResponse+ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HTTPResponse+ext.swift"; path = "BuckarooBanzai/Data Structs/HTTPResponse+ext.swift"; sourceTree = "<group>"; };
+		EB3354E188BB0D0A71386625E0E15F74 /* Pods-ibotta */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ibotta"; path = Pods_ibotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0C4FF33FEDB6151F5C6C4E1F0FF678E /* Pods-ibotta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ibotta-dummy.m"; sourceTree = "<group>"; };
+		F5D68D2B92B5BDB8FDC4722CF491F4ED /* BuckarooBanzai-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BuckarooBanzai-dummy.m"; sourceTree = "<group>"; };
+		F8268F0B24C33F8663D6C190BEA78991 /* Pods-ibotta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ibotta.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4999190815F2E25E19FD5CBC7397F797 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A558DB8C08D95191D71FA6BA3EA30B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		859F7B6AB8EA675726A5F89BFEC633A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF8E1D034B8DB4B67243BFF15B3F9FFA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5240553A6A7FDDB1C04F3176C61485AB /* BuckarooBanzai */ = {
+			isa = PBXGroup;
+			children = (
+				37C6FB3C21A0894EA667A1D858217B77 /* BBError.swift */,
+				7772EF300C1512E8E55E3DAF4B851364 /* BuckarooBanzai.h */,
+				61DE0D459779D82190580BE9E9BEE83F /* BuckarooBanzai.swift */,
+				24888F0F82FCC55204E338F900F17183 /* FormRequestSerializer.swift */,
+				AA9B9A6154713A194F105F5E7BB9B9C3 /* HTTPAcceptType.swift */,
+				45EBD74196CDAC2E4FFCC6192729FBBB /* HTTPContentType.swift */,
+				92C3281CC3640F642DDE09AA6C98E78D /* HTTPRequestMethod.swift */,
+				C74C011A54ADD4B88726A70D61703939 /* HTTPResponse.swift */,
+				E85A31207AA3B0DB2F752CB9C2FB4721 /* HTTPResponse+ext.swift */,
+				DAAE32A5973E1735393EC015BE429C19 /* JSONRequestSerializer.swift */,
+				9E8AC438BEED03C51DECC44A879B8917 /* RequestSerializer.swift */,
+				A9608ACC071EED950897572F35219B42 /* Service.swift */,
+				A5D842BBD50E2B2DF7157EEE9E96A5CA /* Support Files */,
+			);
+			name = BuckarooBanzai;
+			path = BuckarooBanzai;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A5D842BBD50E2B2DF7157EEE9E96A5CA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ED9C58994DE0AAA1B7BDA43D3C27505 /* BuckarooBanzai.modulemap */,
+				F5D68D2B92B5BDB8FDC4722CF491F4ED /* BuckarooBanzai-dummy.m */,
+				C681D554B6A114E1A871A45664B67C20 /* BuckarooBanzai-Info.plist */,
+				8448FA66053432DE9D9F8557F4DB62CE /* BuckarooBanzai-prefix.pch */,
+				9EE272C487D10B367C476AE3D6EEB5CE /* BuckarooBanzai-umbrella.h */,
+				1A9E2E13F267922302D13A08A0324CE7 /* BuckarooBanzai.debug.xcconfig */,
+				2F94EA0EE4C94E42ACB56C9506EA60BC /* BuckarooBanzai.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BuckarooBanzai";
+			sourceTree = "<group>";
+		};
+		B14FD0D38E82F23D6358FF3EFBACBA00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5240553A6A7FDDB1C04F3176C61485AB /* BuckarooBanzai */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B1F414CBD9F11F61EBC7464F0BFD707A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E98D33C4579FB259A2FE218CB25FCB4B /* Pods-ibotta */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				B14FD0D38E82F23D6358FF3EFBACBA00 /* Pods */,
+				F44DB96DE47EE2F2783D03552542E9E8 /* Products */,
+				B1F414CBD9F11F61EBC7464F0BFD707A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E98D33C4579FB259A2FE218CB25FCB4B /* Pods-ibotta */ = {
+			isa = PBXGroup;
+			children = (
+				F8268F0B24C33F8663D6C190BEA78991 /* Pods-ibotta.modulemap */,
+				979A430AEC4A579DFC9B43F6F189A5EE /* Pods-ibotta-acknowledgements.markdown */,
+				53AF9962E6EF35094E69B2566C2887FB /* Pods-ibotta-acknowledgements.plist */,
+				F0C4FF33FEDB6151F5C6C4E1F0FF678E /* Pods-ibotta-dummy.m */,
+				564170D04FA623A96245D6F9BE428EBA /* Pods-ibotta-frameworks.sh */,
+				8BFCC664DA2527742D94DCF3C24A1B55 /* Pods-ibotta-Info.plist */,
+				BE72E8C9D1C67ECFCAD6FBE4D766DEAD /* Pods-ibotta-umbrella.h */,
+				71E7F14D622CB96AB7A5A37DF13EC207 /* Pods-ibotta.debug.xcconfig */,
+				0ECCDA745F5D3DAB647B6F95378A53A4 /* Pods-ibotta.release.xcconfig */,
+			);
+			name = "Pods-ibotta";
+			path = "Target Support Files/Pods-ibotta";
+			sourceTree = "<group>";
+		};
+		F44DB96DE47EE2F2783D03552542E9E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F8FEEE91BC8009516C1CC953DE04A90 /* BuckarooBanzai */,
+				EB3354E188BB0D0A71386625E0E15F74 /* Pods-ibotta */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		41087AB37FE4D4A68D8AEE2AAAE56ACC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F569422AAA6D584DCE4EAE3F37C5E1D /* BuckarooBanzai.h in Headers */,
+				2B44C9D2DEF374CEDE1BAE933C25B641 /* BuckarooBanzai-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80E26690AF99E9837E83BD503701D00F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2E128E81FCCDEFB484943940A898216 /* Pods-ibotta-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		515F9B834A112BCA850AB763BFAD7B05 /* BuckarooBanzai */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FC095A689DE20BC21516DAD6087767C /* Build configuration list for PBXNativeTarget "BuckarooBanzai" */;
+			buildPhases = (
+				41087AB37FE4D4A68D8AEE2AAAE56ACC /* Headers */,
+				99340DF2F03562E8E83B9B8D6F3C8E1D /* Sources */,
+				859F7B6AB8EA675726A5F89BFEC633A9 /* Frameworks */,
+				BFDC48A4A7B9202EB11506C5B9F02E91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BuckarooBanzai;
+			productName = BuckarooBanzai;
+			productReference = 1F8FEEE91BC8009516C1CC953DE04A90 /* BuckarooBanzai */;
+			productType = "com.apple.product-type.framework";
+		};
+		B9858C45430FA20660DF890CA4A701CF /* Pods-ibotta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA441B1CCDDB587AD775EED78A4C3EB8 /* Build configuration list for PBXNativeTarget "Pods-ibotta" */;
+			buildPhases = (
+				80E26690AF99E9837E83BD503701D00F /* Headers */,
+				C13025AA51648CE58315785EC4F97CA7 /* Sources */,
+				4999190815F2E25E19FD5CBC7397F797 /* Frameworks */,
+				798BB03EC1B2F17E4B4DB9C507D4334F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF63C02C86E38710C6BEC6CA8327F2D1 /* PBXTargetDependency */,
+			);
+			name = "Pods-ibotta";
+			productName = Pods_ibotta;
+			productReference = EB3354E188BB0D0A71386625E0E15F74 /* Pods-ibotta */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F44DB96DE47EE2F2783D03552542E9E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				515F9B834A112BCA850AB763BFAD7B05 /* BuckarooBanzai */,
+				B9858C45430FA20660DF890CA4A701CF /* Pods-ibotta */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		798BB03EC1B2F17E4B4DB9C507D4334F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFDC48A4A7B9202EB11506C5B9F02E91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99340DF2F03562E8E83B9B8D6F3C8E1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71EED7AE726ADDD5F35250318046782 /* BBError.swift in Sources */,
+				0A781FCFDD725B8A0CFA6351ACB04110 /* BuckarooBanzai.swift in Sources */,
+				DE83B6109BE0B95CF00998B2AF72CBBD /* BuckarooBanzai-dummy.m in Sources */,
+				609BED004A5C1DF65B6E12F3189001A3 /* FormRequestSerializer.swift in Sources */,
+				89304E45D39B96C6D82EF5B7EDF16DB6 /* HTTPAcceptType.swift in Sources */,
+				048C57B266DB3C358998061829E47E19 /* HTTPContentType.swift in Sources */,
+				E74911B83CB6B62B7382A35659284358 /* HTTPRequestMethod.swift in Sources */,
+				E098C4F224ADC23C331DE09FB12F46EC /* HTTPResponse.swift in Sources */,
+				DF669620718AF7892941B9A97601DCFC /* HTTPResponse+ext.swift in Sources */,
+				30558E1CFCB6F555845315C0F4F1733D /* JSONRequestSerializer.swift in Sources */,
+				EEF3719707D1035D4B284F29A1DEA8C0 /* RequestSerializer.swift in Sources */,
+				C87044155D13655844E16219F51D5656 /* Service.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C13025AA51648CE58315785EC4F97CA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C482491C7DDDC0B8CC6FBA2FA463085 /* Pods-ibotta-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF63C02C86E38710C6BEC6CA8327F2D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BuckarooBanzai;
+			target = 515F9B834A112BCA850AB763BFAD7B05 /* BuckarooBanzai */;
+			targetProxy = 0043B7D0167080A36FCA164706D0F897 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		377B019D80482C08B65685484D6439A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9E2E13F267922302D13A08A0324CE7 /* BuckarooBanzai.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BuckarooBanzai/BuckarooBanzai-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BuckarooBanzai/BuckarooBanzai-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BuckarooBanzai/BuckarooBanzai.modulemap";
+				PRODUCT_MODULE_NAME = BuckarooBanzai;
+				PRODUCT_NAME = BuckarooBanzai;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		441D1736AD7B3821F93837F81D9FB94F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ECCDA745F5D3DAB647B6F95378A53A4 /* Pods-ibotta.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ibotta/Pods-ibotta-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ibotta/Pods-ibotta.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B985B736AE9DCB812C09B44FCE432AE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71E7F14D622CB96AB7A5A37DF13EC207 /* Pods-ibotta.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ibotta/Pods-ibotta-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ibotta/Pods-ibotta.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CCC4D7D69B4E48E2560EBD133690519B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F94EA0EE4C94E42ACB56C9506EA60BC /* BuckarooBanzai.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BuckarooBanzai/BuckarooBanzai-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BuckarooBanzai/BuckarooBanzai-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BuckarooBanzai/BuckarooBanzai.modulemap";
+				PRODUCT_MODULE_NAME = BuckarooBanzai;
+				PRODUCT_NAME = BuckarooBanzai;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FC095A689DE20BC21516DAD6087767C /* Build configuration list for PBXNativeTarget "BuckarooBanzai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377B019D80482C08B65685484D6439A8 /* Debug */,
+				CCC4D7D69B4E48E2560EBD133690519B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA441B1CCDDB587AD775EED78A4C3EB8 /* Build configuration list for PBXNativeTarget "Pods-ibotta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B985B736AE9DCB812C09B44FCE432AE0 /* Debug */,
+				441D1736AD7B3821F93837F81D9FB94F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

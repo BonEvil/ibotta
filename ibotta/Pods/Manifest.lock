@@ -1,0 +1,16 @@
+PODS:
+  - BuckarooBanzai (0.5.1)
+
+DEPENDENCIES:
+  - BuckarooBanzai (= 0.5.1)
+
+SPEC REPOS:
+  https://github.com/BonEvil/ios-specs.git:
+    - BuckarooBanzai
+
+SPEC CHECKSUMS:
+  BuckarooBanzai: 22029a6f66ec6407706972763743bec5c7b60224
+
+PODFILE CHECKSUM: 75d4bbfa8035fa7afbd8cb6e6dae4648f81b3287
+
+COCOAPODS: 1.11.3
