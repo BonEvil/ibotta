@@ -10,6 +10,8 @@ import UIKit
 struct Fonts {
     static let demiBold = "AvenirNext-DemiBold"
     static let regular = "AvenirNext-Regular"
-    
-    static let fontColor = "FontColor"
+}
+
+struct FontColors {
+    static let main = UIColor(named: "FontColor")
 }

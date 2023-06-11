@@ -14,13 +14,20 @@ class OfferDetailViewController: UIViewController {
             self.title = offer?.currentValue
         }
     }
+    
+    private lazy var wH: CGFloat = {
+        return self.view.frame.size.width / 10
+    }()
+    
+    private let favoriteTopValue = 12.0
+    private let favoriteTrailingValue = -12.0
 
-    var imageView = UIImageView()
-    var nameLabel = UILabel()
-    var descriptionLabel = UILabel()
-    var termsLabel = UILabel()
-    var favoriteButton = UIButton()
-    var favoriteImageView = UIImageView()
+    private var imageView = UIImageView()
+    private var nameLabel = UILabel()
+    private var descriptionLabel = UILabel()
+    private var termsLabel = UILabel()
+    private var favoriteButton = UIButton()
+    private var favoriteImageView = UIImageView()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,38 +36,58 @@ class OfferDetailViewController: UIViewController {
         setupView()
     }
     
-    // MARK: Constraint graphs for UI elements
+    // MARK: Constraints for UI elements
     
-    private lazy var imageViewConstraintGraph: ConstraintGraph = {
-        let constraintGraph = ConstraintGraph(height: 200.0, leadingAnchor: 16.0, trailingAnchor: -16.0)
-        return constraintGraph
+    private lazy var imageViewConstraints: [NSLayoutConstraint] = {
+        return [
+            imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16.0),
+            imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16.0),
+            imageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            imageView.heightAnchor.constraint(lessThanOrEqualToConstant: 200.0)
+        ]
     }()
     
-    private lazy var nameLabelConstraintGraph: ConstraintGraph = {
-        let constraintGraph = ConstraintGraph(leadingAnchor: 16.0, topAnchor: 24.0, trailingAnchor: -16.0)
-        return constraintGraph
+    private lazy var nameLabelConstraints: [NSLayoutConstraint] = {
+        return [
+            nameLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16.0),
+            nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16.0),
+            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24.0)
+        ]
     }()
     
-    private lazy var descriptionLabelConstraintGraph: ConstraintGraph = {
-        let constraintGraph = ConstraintGraph(leadingAnchor: 16.0, topAnchor: 12.0, trailingAnchor: -16.0)
-        return constraintGraph
+    private lazy var descriptionLabelConstraints: [NSLayoutConstraint] = {
+        return [
+            descriptionLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16.0),
+            descriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16.0),
+            descriptionLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 12.0)
+        ]
     }()
     
-    private lazy var termsLabelConstraintGraph: ConstraintGraph = {
-        let constraintGraph = ConstraintGraph(leadingAnchor: 16.0, topAnchor: 11.0, trailingAnchor: -16.0, bottomAnchor: -8.0)
-        return constraintGraph
+    private lazy var termsLabelConstraints: [NSLayoutConstraint] = {
+        return [
+            termsLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16.0),
+            termsLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16.0),
+            termsLabel.topAnchor.constraint(equalTo: self.descriptionLabel.bottomAnchor, constant: 11.0),
+            termsLabel.bottomAnchor.constraint(lessThanOrEqualTo: self.view.bottomAnchor, constant: -8.0)
+        ]
     }()
     
-    private lazy var favoriteButtonConstraintGraph: ConstraintGraph = {
-        let wH = self.view.frame.size.width / 10
-        let constraintGraph = ConstraintGraph(width: wH, height: wH, topAnchor: 12.0,trailingAnchor: -12.0)
-        return constraintGraph
+    private lazy var favoriteButtonConstraints: [NSLayoutConstraint] = {
+        return [
+            favoriteButton.heightAnchor.constraint(equalToConstant: wH),
+            favoriteButton.widthAnchor.constraint(equalToConstant: wH),
+            favoriteButton.trailingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: favoriteTrailingValue),
+            favoriteButton.topAnchor.constraint(equalTo: self.imageView.topAnchor, constant: favoriteTopValue)
+        ]
     }()
     
-    private lazy var favoriteImageConstraintGraph: ConstraintGraph = {
-        let referenceConstraintGraph = favoriteButtonConstraintGraph
-        let constraintGraph = ConstraintGraph(width: referenceConstraintGraph.width - 2, height: referenceConstraintGraph.height - 2, topAnchor: referenceConstraintGraph.topAnchor + 1, trailingAnchor: referenceConstraintGraph.trailingAnchor - 1)
-        return constraintGraph
+    private lazy var favoriteImageConstraints: [NSLayoutConstraint] = {
+        return [
+            favoriteImageView.heightAnchor.constraint(equalToConstant: wH - 2),
+            favoriteImageView.widthAnchor.constraint(equalToConstant: wH - 2),
+            favoriteImageView.trailingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: favoriteTrailingValue - 1),
+            favoriteImageView.topAnchor.constraint(equalTo: self.imageView.topAnchor, constant: favoriteTopValue - 1)
+        ]
     }()
     
     // MARK: Protocol setup method
@@ -87,16 +114,11 @@ class OfferDetailViewController: UIViewController {
         self.view.addSubview(imageView)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: imageViewConstraintGraph.leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: imageViewConstraintGraph.trailingAnchor),
-            imageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
-            imageView.heightAnchor.constraint(lessThanOrEqualToConstant: imageViewConstraintGraph.height)
-        ])
+        NSLayoutConstraint.activate(imageViewConstraints)
     }
     
     private func setupNameLabel() {
-        nameLabel.textColor = UIColor(named: Fonts.fontColor)
+        nameLabel.textColor = FontColors.main
         nameLabel.textAlignment = .center
         nameLabel.numberOfLines = 0
         nameLabel.font = UIFont(name: Fonts.demiBold, size: 18.0)
@@ -105,15 +127,11 @@ class OfferDetailViewController: UIViewController {
         self.view.addSubview(nameLabel)
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            nameLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: nameLabelConstraintGraph.leadingAnchor),
-            nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: nameLabelConstraintGraph.trailingAnchor),
-            nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: nameLabelConstraintGraph.topAnchor)
-        ])
+        NSLayoutConstraint.activate(nameLabelConstraints)
     }
     
     private func setupDescriptionLabel() {
-        descriptionLabel.textColor = UIColor(named: Fonts.fontColor)
+        descriptionLabel.textColor = FontColors.main
         descriptionLabel.textAlignment = .left
         descriptionLabel.numberOfLines = 0
         descriptionLabel.font = UIFont(name: Fonts.demiBold, size: 12.0)
@@ -122,15 +140,11 @@ class OfferDetailViewController: UIViewController {
         self.view.addSubview(descriptionLabel)
         
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            descriptionLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: descriptionLabelConstraintGraph.leadingAnchor),
-            descriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: descriptionLabelConstraintGraph.trailingAnchor),
-            descriptionLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: descriptionLabelConstraintGraph.topAnchor)
-        ])
+        NSLayoutConstraint.activate(descriptionLabelConstraints)
     }
     
     private func setupTermsLabel() {
-        termsLabel.textColor = UIColor(named: Fonts.fontColor)
+        termsLabel.textColor = FontColors.main
         termsLabel.textAlignment = .left
         termsLabel.numberOfLines = 0
         termsLabel.font = UIFont(name: Fonts.regular, size: 11.0)
@@ -139,29 +153,19 @@ class OfferDetailViewController: UIViewController {
         self.view.addSubview(termsLabel)
         
         termsLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            termsLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: termsLabelConstraintGraph.leadingAnchor),
-            termsLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: termsLabelConstraintGraph.trailingAnchor),
-            termsLabel.topAnchor.constraint(equalTo: self.descriptionLabel.bottomAnchor, constant: termsLabelConstraintGraph.topAnchor),
-            termsLabel.bottomAnchor.constraint(lessThanOrEqualTo: self.view.bottomAnchor, constant: termsLabelConstraintGraph.bottomAnchor)
-        ])
+        NSLayoutConstraint.activate(termsLabelConstraints)
     }
     
     private func setupFavoriteButton() {
         favoriteButton.addTarget(self, action: #selector(toggleFavorite), for: .touchUpInside)
         favoriteButton.backgroundColor = .white
-        favoriteButton.layer.cornerRadius = favoriteButtonConstraintGraph.width / 2
+        favoriteButton.layer.cornerRadius = wH / 2
         favoriteButton.layer.borderColor = UIColor.white.cgColor
         favoriteButton.layer.borderWidth = 2.0
         
         self.view.addSubview(favoriteButton)
         favoriteButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            favoriteButton.heightAnchor.constraint(equalToConstant: favoriteButtonConstraintGraph.height),
-            favoriteButton.widthAnchor.constraint(equalToConstant: favoriteButtonConstraintGraph.width),
-            favoriteButton.trailingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: favoriteButtonConstraintGraph.trailingAnchor),
-            favoriteButton.topAnchor.constraint(equalTo: self.imageView.topAnchor, constant: favoriteButtonConstraintGraph.topAnchor)
-        ])
+        NSLayoutConstraint.activate(favoriteButtonConstraints)
     }
     
     private func setupFavoriteImageView() {
@@ -169,12 +173,7 @@ class OfferDetailViewController: UIViewController {
 
         self.view.addSubview(favoriteImageView)
         favoriteImageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            favoriteImageView.heightAnchor.constraint(equalToConstant: favoriteImageConstraintGraph.height),
-            favoriteImageView.widthAnchor.constraint(equalToConstant: favoriteImageConstraintGraph.width),
-            favoriteImageView.trailingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: favoriteImageConstraintGraph.trailingAnchor),
-            favoriteImageView.topAnchor.constraint(equalTo: self.imageView.topAnchor, constant: favoriteImageConstraintGraph.topAnchor)
-        ])
+        NSLayoutConstraint.activate(favoriteImageConstraints)
     }
     
     // MARK: Helper methods

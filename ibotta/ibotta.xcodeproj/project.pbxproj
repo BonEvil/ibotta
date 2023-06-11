@@ -23,7 +23,6 @@
 		6B8007012A33B8C600425A9A /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8007002A33B8C600425A9A /* OfferCell.swift */; };
 		6B8007032A33BCF000425A9A /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8007022A33BCF000425A9A /* ImageService.swift */; };
 		6B90E5692A34CA6C0039055D /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90E5682A34CA6C0039055D /* OfferDetailViewController.swift */; };
-		6B90E56C2A35FF830039055D /* ConstraintGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90E56B2A35FF830039055D /* ConstraintGraph.swift */; };
 		6B90E5702A3618EC0039055D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90E56F2A3618EC0039055D /* Fonts.swift */; };
 		6B90E5722A361D5D0039055D /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90E5712A361D5D0039055D /* Images.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +45,6 @@
 		6B8007002A33B8C600425A9A /* OfferCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
 		6B8007022A33BCF000425A9A /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		6B90E5682A34CA6C0039055D /* OfferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailViewController.swift; sourceTree = "<group>"; };
-		6B90E56B2A35FF830039055D /* ConstraintGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintGraph.swift; sourceTree = "<group>"; };
 		6B90E56F2A3618EC0039055D /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		6B90E5712A361D5D0039055D /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		825D085DAF134AC1A01180B4 /* Pods-ibotta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ibotta.release.xcconfig"; path = "Target Support Files/Pods-ibotta/Pods-ibotta.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		6B90E56A2A35FF670039055D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				6B90E56B2A35FF830039055D /* ConstraintGraph.swift */,
 				6B90E56F2A3618EC0039055D /* Fonts.swift */,
 				6B90E5712A361D5D0039055D /* Images.swift */,
 			);
@@ -317,7 +314,6 @@
 				6B8006FA2A33A44900425A9A /* OffersCollectionViewController.swift in Sources */,
 				6B90E5702A3618EC0039055D /* Fonts.swift in Sources */,
 				6B90E5692A34CA6C0039055D /* OfferDetailViewController.swift in Sources */,
-				6B90E56C2A35FF830039055D /* ConstraintGraph.swift in Sources */,
 				6B8006F22A3389C900425A9A /* Offer.swift in Sources */,
 				6B8007012A33B8C600425A9A /* OfferCell.swift in Sources */,
 				6B8006F42A3393A700425A9A /* ApplicationState.swift in Sources */,

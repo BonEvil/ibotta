@@ -72,10 +72,13 @@ extension OffersCollectionViewController {
     
     /// Calls the `OffersController.retrieveOffers` method to get the offers JsON
     private func retrieveOffers() {
+        
+        /// Check for cached offers first
         if let offers = ApplicationState.offers {
             self.offers = offers
             return
         }
+        
         Task {
             do {
                 let offers = try await OffersController.retrieveOffers()
@@ -87,7 +90,9 @@ extension OffersCollectionViewController {
             }
         }
     }
-    
+}
+
+extension OffersCollectionViewController {
     
     /// Layout for the collection view to encapsulate the definition in the mock image and documentation
     /// - Parameter bounds: the frame size of the container
