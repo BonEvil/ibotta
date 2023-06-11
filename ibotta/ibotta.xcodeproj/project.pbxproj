@@ -25,7 +25,19 @@
 		6B90E5692A34CA6C0039055D /* OfferDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90E5682A34CA6C0039055D /* OfferDetailViewController.swift */; };
 		6B90E5702A3618EC0039055D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90E56F2A3618EC0039055D /* Fonts.swift */; };
 		6B90E5722A361D5D0039055D /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90E5712A361D5D0039055D /* Images.swift */; };
+		6B90E57A2A36603C0039055D /* ibottaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90E5792A36603C0039055D /* ibottaTests.swift */; };
+		6B90E5812A3665360039055D /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90E5802A3665360039055D /* NetworkTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B90E57B2A36603C0039055D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B8006C72A334A3E00425A9A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B8006CE2A334A3E00425A9A;
+			remoteInfo = ibotta;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6B8006CF2A334A3E00425A9A /* ibotta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ibotta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +59,9 @@
 		6B90E5682A34CA6C0039055D /* OfferDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailViewController.swift; sourceTree = "<group>"; };
 		6B90E56F2A3618EC0039055D /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		6B90E5712A361D5D0039055D /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		6B90E5772A36603C0039055D /* ibottaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ibottaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B90E5792A36603C0039055D /* ibottaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ibottaTests.swift; sourceTree = "<group>"; };
+		6B90E5802A3665360039055D /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		825D085DAF134AC1A01180B4 /* Pods-ibotta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ibotta.release.xcconfig"; path = "Target Support Files/Pods-ibotta/Pods-ibotta.release.xcconfig"; sourceTree = "<group>"; };
 		97EA8A28586A486CC5593E5A /* Pods_ibotta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ibotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0BBBFDFCB973F5A3B193949 /* Pods-ibotta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ibotta.debug.xcconfig"; path = "Target Support Files/Pods-ibotta/Pods-ibotta.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +73,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				438261166BF730A14B6B822D /* Pods_ibotta.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B90E5742A36603C0039055D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				6B8006D12A334A3E00425A9A /* ibotta */,
+				6B90E5782A36603C0039055D /* ibottaTests */,
 				6B8006D02A334A3E00425A9A /* Products */,
 				9C79AD40A45869684265DB5B /* Pods */,
 				5726DFA9EE16B9ED9C1A62A8 /* Frameworks */,
@@ -86,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				6B8006CF2A334A3E00425A9A /* ibotta.app */,
+				6B90E5772A36603C0039055D /* ibottaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,8 +120,8 @@
 				6B8006D22A334A3E00425A9A /* AppDelegate.swift */,
 				6B8006D42A334A3E00425A9A /* SceneDelegate.swift */,
 				6B8006F32A3393A700425A9A /* ApplicationState.swift */,
-				6B8006FD2A33B10A00425A9A /* Controllers */,
 				6B8006E62A33673300425A9A /* User Interface */,
+				6B8006FD2A33B10A00425A9A /* Controllers */,
 				6B8006E72A33684E00425A9A /* Network Services */,
 				6B8006F02A3389AD00425A9A /* Models */,
 				6B90E56A2A35FF670039055D /* Common */,
@@ -187,6 +211,15 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		6B90E5782A36603C0039055D /* ibottaTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B90E5792A36603C0039055D /* ibottaTests.swift */,
+				6B90E5802A3665360039055D /* NetworkTests.swift */,
+			);
+			path = ibottaTests;
+			sourceTree = "<group>";
+		};
 		9C79AD40A45869684265DB5B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +251,24 @@
 			productReference = 6B8006CF2A334A3E00425A9A /* ibotta.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6B90E5762A36603C0039055D /* ibottaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B90E57D2A36603C0039055D /* Build configuration list for PBXNativeTarget "ibottaTests" */;
+			buildPhases = (
+				6B90E5732A36603C0039055D /* Sources */,
+				6B90E5742A36603C0039055D /* Frameworks */,
+				6B90E5752A36603C0039055D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B90E57C2A36603C0039055D /* PBXTargetDependency */,
+			);
+			name = ibottaTests;
+			productName = ibottaTests;
+			productReference = 6B90E5772A36603C0039055D /* ibottaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,6 +281,10 @@
 				TargetAttributes = {
 					6B8006CE2A334A3E00425A9A = {
 						CreatedOnToolsVersion = 14.3.1;
+					};
+					6B90E5762A36603C0039055D = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 6B8006CE2A334A3E00425A9A;
 					};
 				};
 			};
@@ -247,6 +302,7 @@
 			projectRoot = "";
 			targets = (
 				6B8006CE2A334A3E00425A9A /* ibotta */,
+				6B90E5762A36603C0039055D /* ibottaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +315,13 @@
 				6B8006EC2A33699800425A9A /* Offers.json in Resources */,
 				6B8006DF2A334A4000425A9A /* LaunchScreen.storyboard in Resources */,
 				6B8006DC2A334A4000425A9A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B90E5752A36603C0039055D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +391,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B90E5732A36603C0039055D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B90E5812A3665360039055D /* NetworkTests.swift in Sources */,
+				6B90E57A2A36603C0039055D /* ibottaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B90E57C2A36603C0039055D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B8006CE2A334A3E00425A9A /* ibotta */;
+			targetProxy = 6B90E57B2A36603C0039055D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6B8006DD2A334A4000425A9A /* LaunchScreen.storyboard */ = {
@@ -522,6 +602,50 @@
 			};
 			name = Release;
 		};
+		6B90E57E2A36603C0039055D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AGZ28X386Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielperson.ibottaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ibotta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ibotta";
+			};
+			name = Debug;
+		};
+		6B90E57F2A36603C0039055D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AGZ28X386Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielperson.ibottaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ibotta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ibotta";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -539,6 +663,15 @@
 			buildConfigurations = (
 				6B8006E42A334A4000425A9A /* Debug */,
 				6B8006E52A334A4000425A9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B90E57D2A36603C0039055D /* Build configuration list for PBXNativeTarget "ibottaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B90E57E2A36603C0039055D /* Debug */,
+				6B90E57F2A36603C0039055D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

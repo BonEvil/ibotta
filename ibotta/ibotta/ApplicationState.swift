@@ -20,7 +20,7 @@ struct ApplicationState {
     private static var favorites: [Offer] = [Offer]()
     
     static func isFavorite(offer: Offer?) -> Bool {
-        if let offer = offer, ApplicationState.favorites.contains(where: { favOffer in
+        if let offer = offer, favorites.contains(where: { favOffer in
             favOffer.id == offer.id
         }) {
             return true
@@ -30,14 +30,14 @@ struct ApplicationState {
     }
     
     static func addFavorite(offer: Offer?) {
-        if let offer = offer, !ApplicationState.isFavorite(offer: offer) {
-            ApplicationState.favorites.append(offer)
+        if let offer = offer, !isFavorite(offer: offer) {
+            favorites.append(offer)
         }
     }
     
     static func removeFavorite(offer: Offer?) {
-        if let offer = offer, ApplicationState.isFavorite(offer: offer) {
-            ApplicationState.favorites.removeAll { favOffer in
+        if let offer = offer, isFavorite(offer: offer) {
+            favorites.removeAll { favOffer in
                 favOffer.id == offer.id
             }
         }
@@ -57,16 +57,20 @@ struct ApplicationState {
     }
     
     static func addCachedImage(forItem imageItem: ImageItem) {
-        ApplicationState.imageCache.append(imageItem)
+        imageCache.append(imageItem)
     }
     
     static func cachedImage(fromUrl url: String) -> UIImage? {
-        if let imageItem = ApplicationState.imageCache.first(where: { item in
+        if let imageItem = imageCache.first(where: { item in
             item.url == url
         }) {
             return imageItem.image
         }
         
         return nil
+    }
+    
+    static func clearCachedImages() {
+        imageCache.removeAll()
     }
 }
