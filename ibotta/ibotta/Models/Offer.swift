@@ -13,5 +13,5 @@ struct Offer: Codable {
     let name: String
     let description: String
     let terms: String
-    let currentValue: String    
+    let currentValue: String
 }

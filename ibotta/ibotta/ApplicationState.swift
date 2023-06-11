@@ -11,11 +11,42 @@ import UIKit
 /// Can be modified to persist
 struct ApplicationState {
     
-    /// Ephemeral state for favorites
-    static var favorites: [Offer] = [Offer]()
+    // MARK: - Offers
+    
+    static var offers: [Offer]?
+    
+    // MARK: - Favorites
+    
+    private static var favorites: [Offer] = [Offer]()
+    
+    static func isFavorite(offer: Offer?) -> Bool {
+        if let offer = offer, ApplicationState.favorites.contains(where: { favOffer in
+            favOffer.id == offer.id
+        }) {
+            return true
+        }
+        
+        return false
+    }
+    
+    static func addFavorite(offer: Offer?) {
+        if let offer = offer, !ApplicationState.isFavorite(offer: offer) {
+            ApplicationState.favorites.append(offer)
+        }
+    }
+    
+    static func removeFavorite(offer: Offer?) {
+        if let offer = offer, ApplicationState.isFavorite(offer: offer) {
+            ApplicationState.favorites.removeAll { favOffer in
+                favOffer.id == offer.id
+            }
+        }
+    }
+    
+    // MARK: - Images
     
     /// Simple image cache to limit network calls
-    static var imageCache: [ImageItem] = [ImageItem]() {
+    private static var imageCache: [ImageItem] = [ImageItem]() {
         didSet {
             /// Arbitrary cache limit on images
             /// Can be modified to check for remaining disk space etc.
@@ -23,5 +54,19 @@ struct ApplicationState {
                 imageCache.remove(at: 0)
             }
         }
+    }
+    
+    static func addCachedImage(forItem imageItem: ImageItem) {
+        ApplicationState.imageCache.append(imageItem)
+    }
+    
+    static func cachedImage(fromUrl url: String) -> UIImage? {
+        if let imageItem = ApplicationState.imageCache.first(where: { item in
+            item.url == url
+        }) {
+            return imageItem.image
+        }
+        
+        return nil
     }
 }

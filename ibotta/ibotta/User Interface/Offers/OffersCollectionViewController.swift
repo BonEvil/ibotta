@@ -1,5 +1,5 @@
 //
-//  CollectionViewController.swift
+//  OffersCollectionViewController.swift
 //  ibotta
 //
 //  Created by Daniel Person on 6/9/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViewController: UICollectionViewController {
+class OffersCollectionViewController: UICollectionViewController {
     
     private let reuseIdentifier = "offercell"
     
@@ -21,20 +21,14 @@ class CollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         self.collectionView!.register(OfferCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
         self.title = "Offers"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         self.retrieveOffers()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     // MARK: UICollectionViewDataSource
 
@@ -54,6 +48,8 @@ class CollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? OfferCell, let offers = self.offers else {
+            /// Something went really wrong
+            /// This should not happen otherwise
             fatalError("unable to create cell")
         }
         cell.setupCell(forOffer: offers[indexPath.row])
@@ -62,23 +58,40 @@ class CollectionViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("DID SELECT: \(indexPath)")
+        guard let selectedOffer = offers?[indexPath.row] else {
+            return
+        }
+        let offerDetailViewController = OfferDetailViewController()
+        offerDetailViewController.offer = selectedOffer
+        
+        self.navigationController?.pushViewController(offerDetailViewController, animated: true)
     }
 }
 
-extension CollectionViewController {
+extension OffersCollectionViewController {
     
+    /// Calls the `OffersController.retrieveOffers` method to get the offers JsON
     private func retrieveOffers() {
+        if let offers = ApplicationState.offers {
+            self.offers = offers
+            return
+        }
         Task {
             do {
                 let offers = try await OffersController.retrieveOffers()
+                ApplicationState.offers = offers
                 self.offers = offers
             } catch {
+                // TODO: Inform the user of an error
                 print("OFFERS ERROR: \(error)")
             }
         }
     }
     
+    
+    /// Layout for the collection view to encapsulate the definition in the mock image and documentation
+    /// - Parameter bounds: the frame size of the container
+    /// - Returns: a `UICollectionViewLayout` to style the collection view
     static func collectionViewControllerLayout(withBounds bounds: CGRect) -> UICollectionViewLayout {
         let left = 12.0
         let right = 12.0
