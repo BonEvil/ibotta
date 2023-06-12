@@ -1,7 +1,7 @@
 # ibotta
 
 ## Structure
-This application contains no storyboards or nib/xib files. All view (including the initial view) are created programatically.
+This application contains no storyboards or nib/xib files. All views (including the initial view) are created programatically.
 
 The View Controllers are encapsulated in a generic ```UINavigationViewController``` which is set as the ```window.rootViewController``` for the application.
 
