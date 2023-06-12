@@ -15,12 +15,7 @@ class OfferDetailViewController: UIViewController {
         }
     }
     
-    private lazy var wH: CGFloat = {
-        return self.view.frame.size.width / 10
-    }()
-    
-    private let favoriteTopValue = 12.0
-    private let favoriteTrailingValue = -12.0
+    // MARK: UI elements
 
     private var imageView = UIImageView()
     private var nameLabel = UILabel()
@@ -29,19 +24,46 @@ class OfferDetailViewController: UIViewController {
     private var favoriteButton = UIButton()
     private var favoriteImageView = UIImageView()
     
+    // MARK: UI lifecycle
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.view.addSubview(imageView)
+        self.view.addSubview(nameLabel)
+        self.view.addSubview(descriptionLabel)
+        self.view.addSubview(termsLabel)
+        self.view.addSubview(favoriteButton)
+        self.view.addSubview(favoriteImageView)
         
         self.view.backgroundColor = .white
         setupView()
     }
     
-    // MARK: Constraints for UI elements
+    // MARK: Constraints and constants for UI elements
+    
+    /// Used to dynamically size the `favoriteButton` according to screen size
+    private lazy var wH: CGFloat = {
+        return self.view.frame.size.width / 10
+    }()
+    
+    /// Used to position the `favoriteButton`
+    private let favoriteTopConstant = 12.0
+    private let favoriteTrailingConstant = -12.0
+    
+    /// Used for the leading and trailing UI element margins
+    private let leadingConstant = 16.0
+    private let trailingConstant = -16.0
+    
+    /// Font sizes for labels
+    private let nameLabelFontSize = 18.0
+    private let descriptionLabelFontSize = 12.0
+    private let termsLabelFontSize = 11.0
     
     private lazy var imageViewConstraints: [NSLayoutConstraint] = {
         return [
-            imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16.0),
-            imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16.0),
+            imageView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: leadingConstant),
+            imageView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: trailingConstant),
             imageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
             imageView.heightAnchor.constraint(lessThanOrEqualToConstant: 200.0)
         ]
@@ -49,24 +71,24 @@ class OfferDetailViewController: UIViewController {
     
     private lazy var nameLabelConstraints: [NSLayoutConstraint] = {
         return [
-            nameLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16.0),
-            nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16.0),
+            nameLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: leadingConstant),
+            nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: trailingConstant),
             nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24.0)
         ]
     }()
     
     private lazy var descriptionLabelConstraints: [NSLayoutConstraint] = {
         return [
-            descriptionLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16.0),
-            descriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16.0),
+            descriptionLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: leadingConstant),
+            descriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: trailingConstant),
             descriptionLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 12.0)
         ]
     }()
     
     private lazy var termsLabelConstraints: [NSLayoutConstraint] = {
         return [
-            termsLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 16.0),
-            termsLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -16.0),
+            termsLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: leadingConstant),
+            termsLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: trailingConstant),
             termsLabel.topAnchor.constraint(equalTo: self.descriptionLabel.bottomAnchor, constant: 11.0),
             termsLabel.bottomAnchor.constraint(lessThanOrEqualTo: self.view.bottomAnchor, constant: -8.0)
         ]
@@ -76,8 +98,8 @@ class OfferDetailViewController: UIViewController {
         return [
             favoriteButton.heightAnchor.constraint(equalToConstant: wH),
             favoriteButton.widthAnchor.constraint(equalToConstant: wH),
-            favoriteButton.trailingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: favoriteTrailingValue),
-            favoriteButton.topAnchor.constraint(equalTo: self.imageView.topAnchor, constant: favoriteTopValue)
+            favoriteButton.trailingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: favoriteTrailingConstant),
+            favoriteButton.topAnchor.constraint(equalTo: self.imageView.topAnchor, constant: favoriteTopConstant)
         ]
     }()
     
@@ -85,12 +107,12 @@ class OfferDetailViewController: UIViewController {
         return [
             favoriteImageView.heightAnchor.constraint(equalToConstant: wH - 2),
             favoriteImageView.widthAnchor.constraint(equalToConstant: wH - 2),
-            favoriteImageView.trailingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: favoriteTrailingValue - 1),
-            favoriteImageView.topAnchor.constraint(equalTo: self.imageView.topAnchor, constant: favoriteTopValue - 1)
+            favoriteImageView.trailingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: favoriteTrailingConstant - 1),
+            favoriteImageView.topAnchor.constraint(equalTo: self.imageView.topAnchor, constant: favoriteTopConstant - 1)
         ]
     }()
     
-    // MARK: Protocol setup method
+    // MARK: Set up UI elements
     
     func setupView() {
         setupImageView()
@@ -99,33 +121,32 @@ class OfferDetailViewController: UIViewController {
         setupTermsLabel()
         setupFavoriteButton()
         setupFavoriteImageView()
+        
+        retrieveImage()
     }
     
     // MARK: UI element setup methods
     
     private func setupImageView() {
         imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate(imageViewConstraints)
+    }
+    
+    private func retrieveImage() {
         if let offer = self.offer, let url = offer.url, let image = ApplicationState.cachedImage(fromUrl: url) {
             imageView.image = image
         } else {
             imageView.image = UIImage(named: Images.placeholder)
         }
-        
-        self.view.addSubview(imageView)
-        
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(imageViewConstraints)
     }
     
     private func setupNameLabel() {
         nameLabel.textColor = FontColors.main
         nameLabel.textAlignment = .center
         nameLabel.numberOfLines = 0
-        nameLabel.font = UIFont(name: Fonts.demiBold, size: 18.0)
+        nameLabel.font = UIFont(name: Fonts.demiBold, size: nameLabelFontSize)
         nameLabel.text = offer?.name
-        
-        self.view.addSubview(nameLabel)
-        
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(nameLabelConstraints)
     }
@@ -134,11 +155,8 @@ class OfferDetailViewController: UIViewController {
         descriptionLabel.textColor = FontColors.main
         descriptionLabel.textAlignment = .left
         descriptionLabel.numberOfLines = 0
-        descriptionLabel.font = UIFont(name: Fonts.demiBold, size: 12.0)
+        descriptionLabel.font = UIFont(name: Fonts.demiBold, size: descriptionLabelFontSize)
         descriptionLabel.text = offer?.description
-        
-        self.view.addSubview(descriptionLabel)
-        
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(descriptionLabelConstraints)
     }
@@ -147,11 +165,8 @@ class OfferDetailViewController: UIViewController {
         termsLabel.textColor = FontColors.main
         termsLabel.textAlignment = .left
         termsLabel.numberOfLines = 0
-        termsLabel.font = UIFont(name: Fonts.regular, size: 11.0)
+        termsLabel.font = UIFont(name: Fonts.regular, size: termsLabelFontSize)
         termsLabel.text = offer?.terms
-        
-        self.view.addSubview(termsLabel)
-        
         termsLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(termsLabelConstraints)
     }
@@ -162,21 +177,17 @@ class OfferDetailViewController: UIViewController {
         favoriteButton.layer.cornerRadius = wH / 2
         favoriteButton.layer.borderColor = UIColor.white.cgColor
         favoriteButton.layer.borderWidth = 2.0
-        
-        self.view.addSubview(favoriteButton)
         favoriteButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(favoriteButtonConstraints)
     }
     
     private func setupFavoriteImageView() {
         setFavorite(ApplicationState.isFavorite(offer: offer))
-
-        self.view.addSubview(favoriteImageView)
         favoriteImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(favoriteImageConstraints)
     }
     
-    // MARK: Helper methods
+    // MARK: Update UI for favorite
     
     @objc
     private func toggleFavorite() {

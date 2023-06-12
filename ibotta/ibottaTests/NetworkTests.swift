@@ -11,26 +11,27 @@ import XCTest
 
 final class NetworkTests: XCTestCase {
     
-    var data: Data?
+    var data: Data? {
+        didSet {
+            self.httpResponse = HTTPResponse(statusCode: 200, headers: [:], body: self.data)
+        }
+    }
+    var httpResponse: HTTPResponse?
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        do {
+            let data = try Bundle.dataFromJsonFile("Offers")
+            self.data = data
+        } catch {
+            throw error
+        }
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testThatOfferDataJsonFileExists() {
-        do {
-            let data = try Bundle.dataFromJsonFile("Offers")
-            self.data = data
-        } catch {
-            XCTFail("\(error)")
-        }
-    }
-    
-    func testThatTheOffersServiceUsesTheTestData() {
+    func testThatTheOffersServiceUsesTheTestData() throws {
         let service = OffersService()
         Task {
             do {
@@ -40,6 +41,17 @@ final class NetworkTests: XCTestCase {
             } catch {
                 XCTFail("\(error)")
             }
+        }
+    }
+    
+    func testThatTheOfferModelDecodesFromTestData() throws {
+        guard let response = self.httpResponse else {
+            throw NSError(domain: "networktestErrorDomain", code: -1, userInfo: [NSLocalizedDescriptionKey: "self.httpResponse not set"])
+        }
+        do {
+            let _: [Offer] = try response.decodeBodyData(convertFromSnakeCase: true)
+        } catch {
+            XCTFail("\(error)")
         }
     }
 }

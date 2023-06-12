@@ -57,6 +57,11 @@ struct ApplicationState {
     }
     
     static func addCachedImage(forItem imageItem: ImageItem) {
+        if imageCache.contains(where: { item in
+            item.url == imageItem.url
+        }) {
+            return
+        }
         imageCache.append(imageItem)
     }
     

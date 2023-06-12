@@ -25,13 +25,7 @@ class OfferCell: UICollectionViewCell {
     /// Used to ensure all image operations are in background thread; setting the image is done on the main thread
     private let queue = DispatchQueue(label: "imageQueue")
     
-    private let nameLabelFontSize = 11.0
-    private let currentValueLabelFontSize = 12.0
-    private lazy var wH: CGFloat = {
-        return (self.frame.width / 5)
-    }()
-    
-    // MARK: View elements
+    // MARK: UI elements
     
     private var imageViewContainer: UIView?
     private var imageView: UIImageView?
@@ -47,7 +41,17 @@ class OfferCell: UICollectionViewCell {
     private var itemNameLabel: UILabel?
     private var favoriteImageView: UIImageView?
     
-    // MARK: UI element constraints
+    // MARK: Constraints and constants for UI elements
+    
+    private lazy var wH: CGFloat = {
+        return (self.frame.width / 5)
+    }()
+    
+    private let topLeadingConstant = 6.0
+    private let bottomTrailingConstant = -6.0
+    
+    private let nameLabelFontSize = 11.0
+    private let currentValueLabelFontSize = 12.0
     
     private lazy var imageViewContainerConstraints: [NSLayoutConstraint] = {
         guard let imageViewContainer = self.imageViewContainer, let currentValueLabel = self.currentValueLabel else {
@@ -68,10 +72,10 @@ class OfferCell: UICollectionViewCell {
         }
         
         return [
-            imageView.topAnchor.constraint(equalTo: imageViewContainer.topAnchor, constant: 6.0),
-            imageView.bottomAnchor.constraint(equalTo: imageViewContainer.bottomAnchor, constant: -6.0),
-            imageView.leadingAnchor.constraint(equalTo: imageViewContainer.leadingAnchor, constant: 6.0),
-            imageView.trailingAnchor.constraint(equalTo: imageViewContainer.trailingAnchor, constant: -6.0)
+            imageView.topAnchor.constraint(equalTo: imageViewContainer.topAnchor, constant: topLeadingConstant),
+            imageView.bottomAnchor.constraint(equalTo: imageViewContainer.bottomAnchor, constant: bottomTrailingConstant),
+            imageView.leadingAnchor.constraint(equalTo: imageViewContainer.leadingAnchor, constant: topLeadingConstant),
+            imageView.trailingAnchor.constraint(equalTo: imageViewContainer.trailingAnchor, constant: bottomTrailingConstant)
         ]
     }()
     
@@ -109,8 +113,8 @@ class OfferCell: UICollectionViewCell {
         return [
             favoriteImageView.heightAnchor.constraint(equalToConstant: wH),
             favoriteImageView.widthAnchor.constraint(equalToConstant: wH),
-            favoriteImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 6.0),
-            favoriteImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -6.0)
+            favoriteImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: topLeadingConstant),
+            favoriteImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: bottomTrailingConstant)
         ]
     }()
     
@@ -253,6 +257,7 @@ class OfferCell: UICollectionViewCell {
         }
     }
     
+    /// Since this cell can be reused, only initialize  `favoriteImageView` if it doesn't already exist
     private func setupFavoriteImageIfNeeded() {
         if self.favoriteImageView == nil {
             self.favoriteImageView = UIImageView()
