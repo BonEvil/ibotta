@@ -22,6 +22,8 @@ When trying to cache an image, the cache first checks to see if the image alread
 
 The image in ```OfferCell``` first tries to load from the cache. If the image does not exist, it then loads from the provided URL and caches the image.
 
+If the image URL fails to contain image data, a placeholder image is used.
+
 The image in ```OfferDetailViewController``` is loaded from the cache every time as it is guaranteed to be there because the navigation to it comes from an ```OfferCell``` that is visible on the screen which would have a cached image or just cached an image.
 
 Tapping on the “star” image will set this offer as a favorite and will be reflected on both the cell and detail UI.
