@@ -45,34 +45,38 @@ struct ApplicationState {
     
     // MARK: - Images
     
+    static let queue = DispatchQueue(label: "thread-safe-array")
+    
     /// Simple image cache to limit network calls
     private static var imageCache: [ImageItem] = [ImageItem]() {
         didSet {
             /// Arbitrary cache limit on images
             /// Can be modified to check for remaining disk space etc.
-            if imageCache.count > 50, imageCache.first != nil {
+            if imageCache.count > 50 && imageCache.first != nil {
                 imageCache.remove(at: 0)
             }
         }
     }
     
     static func addCachedImage(forItem imageItem: ImageItem) {
-        if imageCache.contains(where: { item in
-            item.url == imageItem.url
-        }) {
+        if cachedImage(fromUrl: imageItem.url) != nil {
             return
         }
-        imageCache.append(imageItem)
+        queue.async {
+            imageCache.append(imageItem)
+        }
     }
     
     static func cachedImage(fromUrl url: String) -> UIImage? {
-        if let imageItem = imageCache.first(where: { item in
-            item.url == url
-        }) {
-            return imageItem.image
+        queue.sync {
+            if let imageItem = imageCache.first(where: { item in
+                item.url == url
+            }) {
+                return imageItem.image
+            }
+            
+            return nil
         }
-        
-        return nil
     }
     
     static func clearCachedImages() {
