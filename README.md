@@ -24,7 +24,7 @@ The image in ```OfferCell``` first tries to load from the cache. If the image do
 
 If the image URL fails to contain image data, a placeholder image is used.
 
-The image in ```OfferDetailViewController``` is loaded from the cache every time as it is guaranteed to be there because the navigation to it comes from an ```OfferCell``` that is visible on the screen which would have a cached image or just cached an image.
+The image in ```OfferDetailViewController``` is loaded from the cache every time as it is guaranteed to be there (except where a placeholder is used) because the navigation to it comes from an ```OfferCell``` that is visible on the screen which would have a cached image or just cached an image.
 
 Tapping on the “star” image will set this offer as a favorite and will be reflected on both the cell and detail UI.
 
