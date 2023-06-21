@@ -1,0 +1,6 @@
+framework module ibottaUIKit {
+  umbrella header "ibottaUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -16,30 +16,24 @@ struct ApplicationState {
     static var offers: [Offer]?
     
     // MARK: - Favorites
-    
-    private static var favorites: [Offer] = [Offer]()
+        
+    private static var favorites: Set<Offer> = Set<Offer>()
     
     static func isFavorite(offer: Offer?) -> Bool {
-        if let offer = offer, favorites.contains(where: { favOffer in
-            favOffer.id == offer.id
-        }) {
-            return true
-        }
+        guard let offer = offer else { return false }
         
-        return false
+        return favorites.contains(offer)
     }
     
     static func addFavorite(offer: Offer?) {
-        if let offer = offer, !isFavorite(offer: offer) {
-            favorites.append(offer)
+        if let offer = offer {
+            favorites.insert(offer)
         }
     }
     
     static func removeFavorite(offer: Offer?) {
-        if let offer = offer, isFavorite(offer: offer) {
-            favorites.removeAll { favOffer in
-                favOffer.id == offer.id
-            }
+        if let offer = offer {
+            favorites.remove(offer)
         }
     }
     

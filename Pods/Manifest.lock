@@ -1,16 +1,23 @@
 PODS:
   - BuckarooBanzai (0.5.1)
+  - ibottaUIKit (0.0.1)
 
 DEPENDENCIES:
   - BuckarooBanzai (= 0.5.1)
+  - ibottaUIKit (from `../ibottaUIKit`)
 
 SPEC REPOS:
   https://github.com/BonEvil/ios-specs.git:
     - BuckarooBanzai
 
+EXTERNAL SOURCES:
+  ibottaUIKit:
+    :path: "../ibottaUIKit"
+
 SPEC CHECKSUMS:
   BuckarooBanzai: 22029a6f66ec6407706972763743bec5c7b60224
+  ibottaUIKit: 3d93b73d665b91f1b780b8bf84c9ec5f2bb82fae
 
-PODFILE CHECKSUM: 75d4bbfa8035fa7afbd8cb6e6dae4648f81b3287
+PODFILE CHECKSUM: 3b144477e7bdcfa8fa14b461a51c71c937d735d0
 
 COCOAPODS: 1.11.3

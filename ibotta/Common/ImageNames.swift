@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Images {
+struct ImageNames {
     static let favoriteTrue = "star.fill"
     static let favoriteFalse = "star"
     static let placeholder = "ImageNotAvailable"

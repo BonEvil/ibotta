@@ -5,7 +5,7 @@
 //  Created by Daniel Person on 6/10/23.
 //
 
-import UIKit
+import ibottaUIKit
 
 class OfferDetailViewController: UIViewController {
     
@@ -18,9 +18,33 @@ class OfferDetailViewController: UIViewController {
     // MARK: UI elements
 
     private var imageView = UIImageView()
-    private var nameLabel = UILabel()
-    private var descriptionLabel = UILabel()
-    private var termsLabel = UILabel()
+    private var nameLabel: UILabel? {
+        didSet {
+            if let nameLabel = self.nameLabel {
+                nameLabel.text = offer?.name
+                self.view.addSubview(nameLabel)
+                NSLayoutConstraint.activate(nameLabelConstraints)
+            }
+        }
+    }
+    private var descriptionLabel: UILabel? {
+        didSet {
+            if let descriptionLabel = self.descriptionLabel {
+                descriptionLabel.text = offer?.description
+                self.view.addSubview(descriptionLabel)
+                NSLayoutConstraint.activate(descriptionLabelConstraints)
+            }
+        }
+    }
+    private var termsLabel: UILabel? {
+        didSet {
+            if let termsLabel = self.termsLabel {
+                termsLabel.text = offer?.terms
+                self.view.addSubview(termsLabel)
+                NSLayoutConstraint.activate(termsLabelConstraints)
+            }
+        }
+    }
     private var favoriteButton = UIButton()
     private var favoriteImageView = UIImageView()
     
@@ -30,13 +54,15 @@ class OfferDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.view.addSubview(imageView)
-        self.view.addSubview(nameLabel)
-        self.view.addSubview(descriptionLabel)
-        self.view.addSubview(termsLabel)
+        
+        self.nameLabel = ibottaUIKit.shared.labelWithStyle(.itemNameInDetail, andText: offer?.name)
+        self.descriptionLabel = ibottaUIKit.shared.labelWithStyle(.descriptionInDetail, andText: offer?.description)
+        self.termsLabel = ibottaUIKit.shared.labelWithStyle(.termsInDetail, andText: offer?.terms)
+        
         self.view.addSubview(favoriteButton)
         self.view.addSubview(favoriteImageView)
         
-        self.view.backgroundColor = .white
+        self.view.backgroundColor = UIColor(named: "BackgroundColor")
         setupView()
     }
     
@@ -70,6 +96,10 @@ class OfferDetailViewController: UIViewController {
     }()
     
     private lazy var nameLabelConstraints: [NSLayoutConstraint] = {
+        guard let nameLabel = self.nameLabel else {
+            return [NSLayoutConstraint]()
+        }
+        
         return [
             nameLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: leadingConstant),
             nameLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: trailingConstant),
@@ -78,18 +108,26 @@ class OfferDetailViewController: UIViewController {
     }()
     
     private lazy var descriptionLabelConstraints: [NSLayoutConstraint] = {
+        guard let nameLabel = self.nameLabel, let descriptionLabel = self.descriptionLabel else {
+            return [NSLayoutConstraint]()
+        }
+        
         return [
             descriptionLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: leadingConstant),
             descriptionLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: trailingConstant),
-            descriptionLabel.topAnchor.constraint(equalTo: self.nameLabel.bottomAnchor, constant: 12.0)
+            descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 12.0)
         ]
     }()
     
     private lazy var termsLabelConstraints: [NSLayoutConstraint] = {
+        guard let descriptionLabel = self.descriptionLabel, let termsLabel = self.termsLabel else {
+            return [NSLayoutConstraint]()
+        }
+        
         return [
             termsLabel.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: leadingConstant),
             termsLabel.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: trailingConstant),
-            termsLabel.topAnchor.constraint(equalTo: self.descriptionLabel.bottomAnchor, constant: 11.0),
+            termsLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 11.0),
             termsLabel.bottomAnchor.constraint(lessThanOrEqualTo: self.view.bottomAnchor, constant: -8.0)
         ]
     }()
@@ -116,9 +154,6 @@ class OfferDetailViewController: UIViewController {
     
     func setupView() {
         setupImageView()
-        setupNameLabel()
-        setupDescriptionLabel()
-        setupTermsLabel()
         setupFavoriteButton()
         setupFavoriteImageView()
         
@@ -137,38 +172,8 @@ class OfferDetailViewController: UIViewController {
         if let offer = self.offer, let url = offer.url, let image = ApplicationState.cachedImage(fromUrl: url) {
             imageView.image = image
         } else {
-            imageView.image = UIImage(named: Images.placeholder)
+            imageView.image = UIImage(named: ImageNames.placeholder)
         }
-    }
-    
-    private func setupNameLabel() {
-        nameLabel.textColor = FontColors.main
-        nameLabel.textAlignment = .center
-        nameLabel.numberOfLines = 0
-        nameLabel.font = UIFont(name: Fonts.demiBold, size: nameLabelFontSize)
-        nameLabel.text = offer?.name
-        nameLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(nameLabelConstraints)
-    }
-    
-    private func setupDescriptionLabel() {
-        descriptionLabel.textColor = FontColors.main
-        descriptionLabel.textAlignment = .left
-        descriptionLabel.numberOfLines = 0
-        descriptionLabel.font = UIFont(name: Fonts.demiBold, size: descriptionLabelFontSize)
-        descriptionLabel.text = offer?.description
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(descriptionLabelConstraints)
-    }
-    
-    private func setupTermsLabel() {
-        termsLabel.textColor = FontColors.main
-        termsLabel.textAlignment = .left
-        termsLabel.numberOfLines = 0
-        termsLabel.font = UIFont(name: Fonts.regular, size: termsLabelFontSize)
-        termsLabel.text = offer?.terms
-        termsLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(termsLabelConstraints)
     }
     
     private func setupFavoriteButton() {
@@ -199,15 +204,15 @@ class OfferDetailViewController: UIViewController {
         }
     }
     
-    private func setFavorite(_ favorite: Bool) {
+    private func setFavorite(_ favorite: Bool) {        
         if favorite {
             ApplicationState.addFavorite(offer: offer)
             favoriteImageView.tintColor = .systemYellow
-            favoriteImageView.image = UIImage(systemName: Images.favoriteTrue)
+            favoriteImageView.image = UIImage(systemName: ImageNames.favoriteTrue)
         } else {
             ApplicationState.removeFavorite(offer: offer)
             favoriteImageView.tintColor = .systemGray
-            favoriteImageView.image = UIImage(systemName: Images.favoriteFalse)
+            favoriteImageView.image = UIImage(systemName: ImageNames.favoriteFalse)
         }
     }
 }

@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Offer: Codable {
+struct Offer: Codable, Hashable {
     let id: String
     let url: String?
     let name: String
     let description: String
     let terms: String
-    let currentValue: String
+    let currentValue: String    
 }

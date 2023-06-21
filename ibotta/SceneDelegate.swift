@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ibottaUIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,6 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
+        
+        if let fontColor = UIColor(named: "FontColor") {
+            ibottaUIKit.settings = ibottaUIKitSettings(fontBaseName: "AvenirNext", fontColor: fontColor)
+        }
+        _ = ibottaUIKit.shared /// Just a pre-initialization
         
         let layout = OffersCollectionViewController.collectionViewControllerLayout(withBounds: windowScene.coordinateSpace.bounds)
         let collectionViewController = OffersCollectionViewController(collectionViewLayout: layout)
