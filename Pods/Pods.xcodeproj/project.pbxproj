@@ -9,71 +9,71 @@
 /* Begin PBXBuildFile section */
 		048C57B266DB3C358998061829E47E19 /* HTTPContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EBD74196CDAC2E4FFCC6192729FBBB /* HTTPContentType.swift */; };
 		0A781FCFDD725B8A0CFA6351ACB04110 /* BuckarooBanzai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DE0D459779D82190580BE9E9BEE83F /* BuckarooBanzai.swift */; };
-		1D75989BD5BB2C733258CA7EC31FF699 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		28343D29B81E63D906B7CD2848AFB34B /* ibottaUIKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E9EECE0529EF3B4631E692777DD6D91F /* ibottaUIKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		155845053CB556775567247570D319DB /* OfferCellImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612BFB6613406ED104A147E421E5852B /* OfferCellImageContainer.swift */; };
+		26590091B3165C18B86AD20FF284640A /* ibottaUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5837A8691787470B1B852C48DC9E8E /* ibottaUIKit.swift */; };
 		2B44C9D2DEF374CEDE1BAE933C25B641 /* BuckarooBanzai-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EE272C487D10B367C476AE3D6EEB5CE /* BuckarooBanzai-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		30558E1CFCB6F555845315C0F4F1733D /* JSONRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAE32A5973E1735393EC015BE429C19 /* JSONRequestSerializer.swift */; };
-		5BF7895876418011731F4803D8B27579 /* OfferCellImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A774F10A8316FD21DE312BCFDFE2A4 /* OfferCellImageContainer.swift */; };
+		37652DAAA652A5835B1385C4AF68B49A /* ibottaUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C1D98996491AA8D1C4971AC60257762C /* ibottaUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52BE6ADB069E883833429B77B4F5A4CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		5DF0BE07DF316AA03B087D52206DC7D9 /* OfferDetailImageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087257C0DA190F171ECA8F273977E212 /* OfferDetailImageContainer.swift */; };
 		609BED004A5C1DF65B6E12F3189001A3 /* FormRequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24888F0F82FCC55204E338F900F17183 /* FormRequestSerializer.swift */; };
+		611A04A549C84B4DB6C44FCC58D6CB4E /* ibottaUIKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B14DEC12BA9999DE2B3DA53060967C30 /* ibottaUIKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6F569422AAA6D584DCE4EAE3F37C5E1D /* BuckarooBanzai.h in Headers */ = {isa = PBXBuildFile; fileRef = 7772EF300C1512E8E55E3DAF4B851364 /* BuckarooBanzai.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		839290E1F0921A7AC1E6D8F66003DB66 /* Pods-ibotta-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BE72E8C9D1C67ECFCAD6FBE4D766DEAD /* Pods-ibotta-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89304E45D39B96C6D82EF5B7EDF16DB6 /* HTTPAcceptType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9B9A6154713A194F105F5E7BB9B9C3 /* HTTPAcceptType.swift */; };
-		A8FD976A6225CA57C6D25953F5F52CEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		92CA02BEAF238B66A098F49381E10386 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		93FE2A88A1661917A1006D45DF39AF28 /* OfferLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE84381A2F516C871325787BAF0C91AB /* OfferLabel.swift */; };
 		B71EED7AE726ADDD5F35250318046782 /* BBError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C6FB3C21A0894EA667A1D858217B77 /* BBError.swift */; };
 		C3DB7D79C48B8034AFF327D1E330FE17 /* Pods-ibotta-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C4FF33FEDB6151F5C6C4E1F0FF678E /* Pods-ibotta-dummy.m */; };
-		C4D3CC8D910726ABFC22DA2111417463 /* ibottaUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B4D4C4F146D931BED8537586138216 /* ibottaUIKit.swift */; };
 		C87044155D13655844E16219F51D5656 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9608ACC071EED950897572F35219B42 /* Service.swift */; };
 		CC709C43CC10A6A51383E223C9F62254 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		D8E4E4136B32EF17F55F2447622AE529 /* ibottaUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1451905D7D3ABF19A247A797E5AF31A7 /* ibottaUIKit-dummy.m */; };
-		DCEC950E4B3F311052F3A867F7EE61F0 /* ibottaUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D2E70280EC93A845B9F1F6DF652FBE23 /* ibottaUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDF8BC48F38B16F3FF9286531F3A280B /* ibottaUIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63617D6CDBBF5F4408F620F857243163 /* ibottaUIKit-dummy.m */; };
 		DE83B6109BE0B95CF00998B2AF72CBBD /* BuckarooBanzai-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D68D2B92B5BDB8FDC4722CF491F4ED /* BuckarooBanzai-dummy.m */; };
 		DF669620718AF7892941B9A97601DCFC /* HTTPResponse+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85A31207AA3B0DB2F752CB9C2FB4721 /* HTTPResponse+ext.swift */; };
 		DF8E1D034B8DB4B67243BFF15B3F9FFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		E098C4F224ADC23C331DE09FB12F46EC /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74C011A54ADD4B88726A70D61703939 /* HTTPResponse.swift */; };
 		E74911B83CB6B62B7382A35659284358 /* HTTPRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C3281CC3640F642DDE09AA6C98E78D /* HTTPRequestMethod.swift */; };
-		E96932028A1165606441D78872EC5F46 /* OfferLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE76B614C0CDE0B1079DCEB82E181E /* OfferLabel.swift */; };
 		EEF3719707D1035D4B284F29A1DEA8C0 /* RequestSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8AC438BEED03C51DECC44A879B8917 /* RequestSerializer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		717E4939A21994160FB60D4BA55E448C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B65490ED418CD2224F995370B1676766;
-			remoteInfo = ibottaUIKit;
-		};
-		7BD421B63B0AD925CFFE0608ACE0E96A /* PBXContainerItemProxy */ = {
+		5B429F54089AE3A03A5CCD397D403BB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 515F9B834A112BCA850AB763BFAD7B05;
 			remoteInfo = BuckarooBanzai;
 		};
+		70960A7635C5F761646FE49E68443B15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B65490ED418CD2224F995370B1676766;
+			remoteInfo = ibottaUIKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02A774F10A8316FD21DE312BCFDFE2A4 /* OfferCellImageContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OfferCellImageContainer.swift; sourceTree = "<group>"; };
+		087257C0DA190F171ECA8F273977E212 /* OfferDetailImageContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OfferDetailImageContainer.swift; sourceTree = "<group>"; };
 		0ECCDA745F5D3DAB647B6F95378A53A4 /* Pods-ibotta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ibotta.release.xcconfig"; sourceTree = "<group>"; };
-		1451905D7D3ABF19A247A797E5AF31A7 /* ibottaUIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ibottaUIKit-dummy.m"; sourceTree = "<group>"; };
 		1A9E2E13F267922302D13A08A0324CE7 /* BuckarooBanzai.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BuckarooBanzai.debug.xcconfig; sourceTree = "<group>"; };
 		1F8FEEE91BC8009516C1CC953DE04A90 /* BuckarooBanzai */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BuckarooBanzai; path = BuckarooBanzai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24888F0F82FCC55204E338F900F17183 /* FormRequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormRequestSerializer.swift; path = BuckarooBanzai/Serializers/FormRequestSerializer.swift; sourceTree = "<group>"; };
-		290B90305CF5282E9E25BD590283D898 /* ibottaUIKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ibottaUIKit.modulemap; sourceTree = "<group>"; };
+		26AB9EC037080E56F9DE87C014D1556C /* ibottaUIKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ibottaUIKit.modulemap; sourceTree = "<group>"; };
 		2F94EA0EE4C94E42ACB56C9506EA60BC /* BuckarooBanzai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BuckarooBanzai.release.xcconfig; sourceTree = "<group>"; };
 		37C6FB3C21A0894EA667A1D858217B77 /* BBError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BBError.swift; path = BuckarooBanzai/Enumerations/BBError.swift; sourceTree = "<group>"; };
-		3ABE76B614C0CDE0B1079DCEB82E181E /* OfferLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OfferLabel.swift; sourceTree = "<group>"; };
-		40B4D4C4F146D931BED8537586138216 /* ibottaUIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ibottaUIKit.swift; path = ibottaUIKit/ibottaUIKit.swift; sourceTree = "<group>"; };
 		45EBD74196CDAC2E4FFCC6192729FBBB /* HTTPContentType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPContentType.swift; path = BuckarooBanzai/Enumerations/HTTPContentType.swift; sourceTree = "<group>"; };
-		4CA96C5A9626F77773ED365A25EA11E1 /* ibottaUIKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ibottaUIKit-Info.plist"; sourceTree = "<group>"; };
-		4DE8D72360B725C4B620D69D20FE9A54 /* ibottaUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ibottaUIKit.release.xcconfig; sourceTree = "<group>"; };
 		53AF9962E6EF35094E69B2566C2887FB /* Pods-ibotta-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ibotta-acknowledgements.plist"; sourceTree = "<group>"; };
 		564170D04FA623A96245D6F9BE428EBA /* Pods-ibotta-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ibotta-frameworks.sh"; sourceTree = "<group>"; };
+		612BFB6613406ED104A147E421E5852B /* OfferCellImageContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OfferCellImageContainer.swift; sourceTree = "<group>"; };
 		61DE0D459779D82190580BE9E9BEE83F /* BuckarooBanzai.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BuckarooBanzai.swift; path = BuckarooBanzai/BuckarooBanzai.swift; sourceTree = "<group>"; };
+		63617D6CDBBF5F4408F620F857243163 /* ibottaUIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ibottaUIKit-dummy.m"; sourceTree = "<group>"; };
+		7112B383357ECB5A9CEDC58AEE4067E8 /* ibottaUIKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ibottaUIKit-Info.plist"; sourceTree = "<group>"; };
 		71E7F14D622CB96AB7A5A37DF13EC207 /* Pods-ibotta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ibotta.debug.xcconfig"; sourceTree = "<group>"; };
 		7772EF300C1512E8E55E3DAF4B851364 /* BuckarooBanzai.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BuckarooBanzai.h; path = BuckarooBanzai/BuckarooBanzai.h; sourceTree = "<group>"; };
 		7ED9C58994DE0AAA1B7BDA43D3C27505 /* BuckarooBanzai.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BuckarooBanzai.modulemap; sourceTree = "<group>"; };
 		8448FA66053432DE9D9F8557F4DB62CE /* BuckarooBanzai-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BuckarooBanzai-prefix.pch"; sourceTree = "<group>"; };
+		8A944FB3C7E3BBE044A5B35CE64D4505 /* ibottaUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ibottaUIKit.debug.xcconfig; sourceTree = "<group>"; };
 		8BFCC664DA2527742D94DCF3C24A1B55 /* Pods-ibotta-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ibotta-Info.plist"; sourceTree = "<group>"; };
 		92C3281CC3640F642DDE09AA6C98E78D /* HTTPRequestMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPRequestMethod.swift; path = BuckarooBanzai/Enumerations/HTTPRequestMethod.swift; sourceTree = "<group>"; };
 		979A430AEC4A579DFC9B43F6F189A5EE /* Pods-ibotta-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ibotta-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -82,32 +82,34 @@
 		9EE272C487D10B367C476AE3D6EEB5CE /* BuckarooBanzai-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BuckarooBanzai-umbrella.h"; sourceTree = "<group>"; };
 		A9608ACC071EED950897572F35219B42 /* Service.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Service.swift; path = BuckarooBanzai/Protocols/Service.swift; sourceTree = "<group>"; };
 		AA9B9A6154713A194F105F5E7BB9B9C3 /* HTTPAcceptType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPAcceptType.swift; path = BuckarooBanzai/Enumerations/HTTPAcceptType.swift; sourceTree = "<group>"; };
+		AF70AEDE51AB722E8169C92D48B68B4E /* ibottaUIKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ibottaUIKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B14DEC12BA9999DE2B3DA53060967C30 /* ibottaUIKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ibottaUIKit-umbrella.h"; sourceTree = "<group>"; };
 		BE72E8C9D1C67ECFCAD6FBE4D766DEAD /* Pods-ibotta-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ibotta-umbrella.h"; sourceTree = "<group>"; };
 		BF9B9966AFD85B5E1799D091DDE3C18F /* ibottaUIKit */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ibottaUIKit; path = ibottaUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C572C26173F33E99E490974D7D9C163F /* ibottaUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ibottaUIKit-prefix.pch"; sourceTree = "<group>"; };
+		C1681DDADB74E7252A2EFD0D22C92DF4 /* ibottaUIKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ibottaUIKit.release.xcconfig; sourceTree = "<group>"; };
+		C1D98996491AA8D1C4971AC60257762C /* ibottaUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ibottaUIKit.h; path = ibottaUIKit/ibottaUIKit.h; sourceTree = "<group>"; };
 		C681D554B6A114E1A871A45664B67C20 /* BuckarooBanzai-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BuckarooBanzai-Info.plist"; sourceTree = "<group>"; };
 		C74C011A54ADD4B88726A70D61703939 /* HTTPResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPResponse.swift; path = "BuckarooBanzai/Data Structs/HTTPResponse.swift"; sourceTree = "<group>"; };
-		D0B0D73C32DF24DBFD5B13714DF47686 /* ibottaUIKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ibottaUIKit.debug.xcconfig; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D2E70280EC93A845B9F1F6DF652FBE23 /* ibottaUIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ibottaUIKit.h; path = ibottaUIKit/ibottaUIKit.h; sourceTree = "<group>"; };
 		DAAE32A5973E1735393EC015BE429C19 /* JSONRequestSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONRequestSerializer.swift; path = BuckarooBanzai/Serializers/JSONRequestSerializer.swift; sourceTree = "<group>"; };
-		E18FD5B3CED9FEFCF11F1591C742B8BC /* ibottaUIKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ibottaUIKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E85A31207AA3B0DB2F752CB9C2FB4721 /* HTTPResponse+ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HTTPResponse+ext.swift"; path = "BuckarooBanzai/Data Structs/HTTPResponse+ext.swift"; sourceTree = "<group>"; };
-		E9EECE0529EF3B4631E692777DD6D91F /* ibottaUIKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ibottaUIKit-umbrella.h"; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EB3354E188BB0D0A71386625E0E15F74 /* Pods-ibotta */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ibotta"; path = Pods_ibotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE84381A2F516C871325787BAF0C91AB /* OfferLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OfferLabel.swift; sourceTree = "<group>"; };
 		F0C4FF33FEDB6151F5C6C4E1F0FF678E /* Pods-ibotta-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ibotta-dummy.m"; sourceTree = "<group>"; };
 		F5D68D2B92B5BDB8FDC4722CF491F4ED /* BuckarooBanzai-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BuckarooBanzai-dummy.m"; sourceTree = "<group>"; };
+		F5EE6D47FD8ACD8A1B066EA1A50F76D3 /* ibottaUIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ibottaUIKit-prefix.pch"; sourceTree = "<group>"; };
 		F8268F0B24C33F8663D6C190BEA78991 /* Pods-ibotta.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ibotta.modulemap"; sourceTree = "<group>"; };
+		FB5837A8691787470B1B852C48DC9E8E /* ibottaUIKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ibottaUIKit.swift; path = ibottaUIKit/ibottaUIKit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		08E1CF70E1CC2BAA46FEE838D19F900F /* Frameworks */ = {
+		6374A885653E09FD0C600DABE7B09D4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D75989BD5BB2C733258CA7EC31FF699 /* Foundation.framework in Frameworks */,
-				A8FD976A6225CA57C6D25953F5F52CEA /* UIKit.framework in Frameworks */,
+				52BE6ADB069E883833429B77B4F5A4CB /* Foundation.framework in Frameworks */,
+				92CA02BEAF238B66A098F49381E10386 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,14 +132,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13F4EAF14ACC8D06815DC625362FEB2B /* UI Elements */ = {
+		0910E0B52831301E170FF5F70334BBB6 /* ibottaUIKit */ = {
 			isa = PBXGroup;
 			children = (
-				02A774F10A8316FD21DE312BCFDFE2A4 /* OfferCellImageContainer.swift */,
-				3ABE76B614C0CDE0B1079DCEB82E181E /* OfferLabel.swift */,
+				C1D98996491AA8D1C4971AC60257762C /* ibottaUIKit.h */,
+				FB5837A8691787470B1B852C48DC9E8E /* ibottaUIKit.swift */,
+				BB15BBFC25AF9D11AAAAF07774B6D185 /* Pod */,
+				1D5BFD3CCE16B7EA2D9C9D75EF8E684D /* Support Files */,
+				A3DFAF1EDE5A507B031E4C7A3E828836 /* UI Elements */,
 			);
-			name = "UI Elements";
-			path = "ibottaUIKit/UI Elements";
+			name = ibottaUIKit;
+			path = ../../ibottaUIKit;
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
@@ -156,6 +161,21 @@
 				EB3354E188BB0D0A71386625E0E15F74 /* Pods-ibotta */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1D5BFD3CCE16B7EA2D9C9D75EF8E684D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				26AB9EC037080E56F9DE87C014D1556C /* ibottaUIKit.modulemap */,
+				63617D6CDBBF5F4408F620F857243163 /* ibottaUIKit-dummy.m */,
+				7112B383357ECB5A9CEDC58AEE4067E8 /* ibottaUIKit-Info.plist */,
+				F5EE6D47FD8ACD8A1B066EA1A50F76D3 /* ibottaUIKit-prefix.pch */,
+				B14DEC12BA9999DE2B3DA53060967C30 /* ibottaUIKit-umbrella.h */,
+				8A944FB3C7E3BBE044A5B35CE64D4505 /* ibottaUIKit.debug.xcconfig */,
+				C1681DDADB74E7252A2EFD0D22C92DF4 /* ibottaUIKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../ibotta/Pods/Target Support Files/ibottaUIKit";
 			sourceTree = "<group>";
 		};
 		5240553A6A7FDDB1C04F3176C61485AB /* BuckarooBanzai */ = {
@@ -179,19 +199,6 @@
 			path = BuckarooBanzai;
 			sourceTree = "<group>";
 		};
-		544DDA8FB5C39B8DFCA7295FAD9B980B /* ibottaUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				D2E70280EC93A845B9F1F6DF652FBE23 /* ibottaUIKit.h */,
-				40B4D4C4F146D931BED8537586138216 /* ibottaUIKit.swift */,
-				819A4D26A450358A0B4E8CF0A5623CC3 /* Pod */,
-				EC483541C36B1C9E2055CCFF88857917 /* Support Files */,
-				13F4EAF14ACC8D06815DC625362FEB2B /* UI Elements */,
-			);
-			name = ibottaUIKit;
-			path = ../../ibottaUIKit;
-			sourceTree = "<group>";
-		};
 		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,20 +208,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		819A4D26A450358A0B4E8CF0A5623CC3 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				E18FD5B3CED9FEFCF11F1591C742B8BC /* ibottaUIKit.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		985228BCE9192EFB002066F00F1BD27D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				544DDA8FB5C39B8DFCA7295FAD9B980B /* ibottaUIKit */,
+				0910E0B52831301E170FF5F70334BBB6 /* ibottaUIKit */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A3DFAF1EDE5A507B031E4C7A3E828836 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				612BFB6613406ED104A147E421E5852B /* OfferCellImageContainer.swift */,
+				087257C0DA190F171ECA8F273977E212 /* OfferDetailImageContainer.swift */,
+				EE84381A2F516C871325787BAF0C91AB /* OfferLabel.swift */,
+			);
+			name = "UI Elements";
+			path = "ibottaUIKit/UI Elements";
 			sourceTree = "<group>";
 		};
 		A5D842BBD50E2B2DF7157EEE9E96A5CA /* Support Files */ = {
@@ -248,6 +258,14 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		BB15BBFC25AF9D11AAAAF07774B6D185 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				AF70AEDE51AB722E8169C92D48B68B4E /* ibottaUIKit.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -277,21 +295,6 @@
 			path = "Target Support Files/Pods-ibotta";
 			sourceTree = "<group>";
 		};
-		EC483541C36B1C9E2055CCFF88857917 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				290B90305CF5282E9E25BD590283D898 /* ibottaUIKit.modulemap */,
-				1451905D7D3ABF19A247A797E5AF31A7 /* ibottaUIKit-dummy.m */,
-				4CA96C5A9626F77773ED365A25EA11E1 /* ibottaUIKit-Info.plist */,
-				C572C26173F33E99E490974D7D9C163F /* ibottaUIKit-prefix.pch */,
-				E9EECE0529EF3B4631E692777DD6D91F /* ibottaUIKit-umbrella.h */,
-				D0B0D73C32DF24DBFD5B13714DF47686 /* ibottaUIKit.debug.xcconfig */,
-				4DE8D72360B725C4B620D69D20FE9A54 /* ibottaUIKit.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../ibotta/Pods/Target Support Files/ibottaUIKit";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -312,12 +315,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6E835AAD3AE90C43116A278EBD4B6CF /* Headers */ = {
+		A30D15A9DFDBD888836B5575A00F25B5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCEC950E4B3F311052F3A867F7EE61F0 /* ibottaUIKit.h in Headers */,
-				28343D29B81E63D906B7CD2848AFB34B /* ibottaUIKit-umbrella.h in Headers */,
+				37652DAAA652A5835B1385C4AF68B49A /* ibottaUIKit.h in Headers */,
+				611A04A549C84B4DB6C44FCC58D6CB4E /* ibottaUIKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,12 +347,12 @@
 		};
 		B65490ED418CD2224F995370B1676766 /* ibottaUIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8EBF03326EBF15E52817689C75A34D74 /* Build configuration list for PBXNativeTarget "ibottaUIKit" */;
+			buildConfigurationList = 5178FF91CD32A406AED450FA2FCB2C23 /* Build configuration list for PBXNativeTarget "ibottaUIKit" */;
 			buildPhases = (
-				D6E835AAD3AE90C43116A278EBD4B6CF /* Headers */,
-				D8C7E2063EEA95379C31DD0CCEC8D17A /* Sources */,
-				08E1CF70E1CC2BAA46FEE838D19F900F /* Frameworks */,
-				B9352085D820DE0D4F568302DE4CBE78 /* Resources */,
+				A30D15A9DFDBD888836B5575A00F25B5 /* Headers */,
+				6FCA4C2D7C1572473F2FC012E14BDBD3 /* Sources */,
+				6374A885653E09FD0C600DABE7B09D4F /* Frameworks */,
+				1C2C64A9B4A9C14E44556523FD2EA98E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -372,8 +375,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				DFC9752D7E86DC5FD9208F525A2CE05F /* PBXTargetDependency */,
-				40F55804FEF69AAE913ACBC333B11E67 /* PBXTargetDependency */,
+				C8778CDCBC4E0B0D738CB9667916443D /* PBXTargetDependency */,
+				0507F1B58123F8E3DF7A1ED06134943B /* PBXTargetDependency */,
 			);
 			name = "Pods-ibotta";
 			productName = Pods_ibotta;
@@ -410,14 +413,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A236BA66BF406D38282FA6E0A35EE6C4 /* Resources */ = {
+		1C2C64A9B4A9C14E44556523FD2EA98E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9352085D820DE0D4F568302DE4CBE78 /* Resources */ = {
+		A236BA66BF406D38282FA6E0A35EE6C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -442,6 +445,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6FCA4C2D7C1572473F2FC012E14BDBD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26590091B3165C18B86AD20FF284640A /* ibottaUIKit.swift in Sources */,
+				CDF8BC48F38B16F3FF9286531F3A280B /* ibottaUIKit-dummy.m in Sources */,
+				155845053CB556775567247570D319DB /* OfferCellImageContainer.swift in Sources */,
+				5DF0BE07DF316AA03B087D52206DC7D9 /* OfferDetailImageContainer.swift in Sources */,
+				93FE2A88A1661917A1006D45DF39AF28 /* OfferLabel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		99340DF2F03562E8E83B9B8D6F3C8E1D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -461,31 +476,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8C7E2063EEA95379C31DD0CCEC8D17A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4D3CC8D910726ABFC22DA2111417463 /* ibottaUIKit.swift in Sources */,
-				D8E4E4136B32EF17F55F2447622AE529 /* ibottaUIKit-dummy.m in Sources */,
-				5BF7895876418011731F4803D8B27579 /* OfferCellImageContainer.swift in Sources */,
-				E96932028A1165606441D78872EC5F46 /* OfferLabel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		40F55804FEF69AAE913ACBC333B11E67 /* PBXTargetDependency */ = {
+		0507F1B58123F8E3DF7A1ED06134943B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ibottaUIKit;
 			target = B65490ED418CD2224F995370B1676766 /* ibottaUIKit */;
-			targetProxy = 717E4939A21994160FB60D4BA55E448C /* PBXContainerItemProxy */;
+			targetProxy = 70960A7635C5F761646FE49E68443B15 /* PBXContainerItemProxy */;
 		};
-		DFC9752D7E86DC5FD9208F525A2CE05F /* PBXTargetDependency */ = {
+		C8778CDCBC4E0B0D738CB9667916443D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BuckarooBanzai;
 			target = 515F9B834A112BCA850AB763BFAD7B05 /* BuckarooBanzai */;
-			targetProxy = 7BD421B63B0AD925CFFE0608ACE0E96A /* PBXContainerItemProxy */;
+			targetProxy = 5B429F54089AE3A03A5CCD397D403BB5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -524,6 +528,42 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		5BF841E0A96BFD4979F0C939F5F76E35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1681DDADB74E7252A2EFD0D22C92DF4 /* ibottaUIKit.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ibottaUIKit/ibottaUIKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ibottaUIKit/ibottaUIKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ibottaUIKit/ibottaUIKit.modulemap";
+				PRODUCT_MODULE_NAME = ibottaUIKit;
+				PRODUCT_NAME = ibottaUIKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		6E73E01638CA66DF03BB5D46C318E972 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -628,41 +668,6 @@
 			};
 			name = Debug;
 		};
-		92D818E9D7DE57C223B089A9138ECF4B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0B0D73C32DF24DBFD5B13714DF47686 /* ibottaUIKit.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ibottaUIKit/ibottaUIKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ibottaUIKit/ibottaUIKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ibottaUIKit/ibottaUIKit.modulemap";
-				PRODUCT_MODULE_NAME = ibottaUIKit;
-				PRODUCT_NAME = ibottaUIKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -763,42 +768,6 @@
 			};
 			name = Release;
 		};
-		BE785A7AB357F1D0266400FBC9F47229 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DE8D72360B725C4B620D69D20FE9A54 /* ibottaUIKit.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ibottaUIKit/ibottaUIKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ibottaUIKit/ibottaUIKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ibottaUIKit/ibottaUIKit.modulemap";
-				PRODUCT_MODULE_NAME = ibottaUIKit;
-				PRODUCT_NAME = ibottaUIKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		CCC4D7D69B4E48E2560EBD133690519B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F94EA0EE4C94E42ACB56C9506EA60BC /* BuckarooBanzai.release.xcconfig */;
@@ -835,6 +804,41 @@
 			};
 			name = Release;
 		};
+		D8ACC73E6053B400DE78635DF3EC3C69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A944FB3C7E3BBE044A5B35CE64D4505 /* ibottaUIKit.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ibottaUIKit/ibottaUIKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ibottaUIKit/ibottaUIKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ibottaUIKit/ibottaUIKit.modulemap";
+				PRODUCT_MODULE_NAME = ibottaUIKit;
+				PRODUCT_NAME = ibottaUIKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -865,11 +869,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EBF03326EBF15E52817689C75A34D74 /* Build configuration list for PBXNativeTarget "ibottaUIKit" */ = {
+		5178FF91CD32A406AED450FA2FCB2C23 /* Build configuration list for PBXNativeTarget "ibottaUIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92D818E9D7DE57C223B089A9138ECF4B /* Debug */,
-				BE785A7AB357F1D0266400FBC9F47229 /* Release */,
+				D8ACC73E6053B400DE78635DF3EC3C69 /* Debug */,
+				5BF841E0A96BFD4979F0C939F5F76E35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -13,7 +13,7 @@ class OffersCollectionViewModel {
     
     var setOffers: (([Offer]) -> Void)?
     
-    func bindOffers(_ setOffers: @escaping (([Offer]) -> Void)) {
+    func bindSetOffers(_ setOffers: @escaping (([Offer]) -> Void)) {
         self.setOffers = setOffers
         
         retrieveOffers()

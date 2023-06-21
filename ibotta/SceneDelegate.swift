@@ -18,8 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        if let fontColor = UIColor(named: "FontColor") {
-            ibottaUIKit.settings = ibottaUIKitSettings(fontBaseName: "AvenirNext", fontColor: fontColor)
+        if let fontColor = UIColor(named: "FontColor"), let placeholderImage = UIImage(named: "ImageNotAvailable") {
+            ibottaUIKit.settings = ibottaUIKitSettings(fontBaseName: "AvenirNext", fontColor: fontColor, placeHolderImage: placeholderImage)
         }
         _ = ibottaUIKit.shared /// Just a pre-initialization
         

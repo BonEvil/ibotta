@@ -24,6 +24,7 @@ class OfferCell: UICollectionViewCell {
     private var imageViewContainer: OfferCellImageContainer?
     private var image: UIImage? {
         didSet {
+            /// Update on main thread
             DispatchQueue.main.async {
                 self.imageViewContainer?.setImage(self.image)
             }
@@ -88,12 +89,19 @@ class OfferCell: UICollectionViewCell {
         self.viewModel = viewModel
         
         setupItemNameLabelIfNeeded()
-        setupCurrentValueLabelIfNeeded()        
-        setupImageViewContainerIfNeeded()
-        imageViewContainer?.setFavorite(ApplicationState.isFavorite(offer: viewModel.offer))
-        viewModel.bindImage { image in
-            self.image = image
+        viewModel.bindSetName { [weak self] text in
+            self?.itemNameLabel?.text = text
         }
+        
+        setupCurrentValueLabelIfNeeded()
+        viewModel.bindSetCurrentValue { [weak self] text in
+            self?.currentValueLabel?.text = text
+        }
+        
+        setupImageViewContainerIfNeeded()
+        self.imageViewContainer?.setFavorite(ApplicationState.isFavorite(offer: viewModel.offer))
+        
+        getItemImage()
     }
     
     // MARK: First-time UI setup for new cells
@@ -101,8 +109,8 @@ class OfferCell: UICollectionViewCell {
     /// Since this cell can be reused, only initialize `imageViewContainer` if it doesn't already exist
     private func setupImageViewContainerIfNeeded() {
         if self.imageViewContainer == nil {
-            self.imageViewContainer = ibottaUIKit.shared.cellImageContainer()
-            self.addSubview(imageViewContainer!)
+            self.imageViewContainer = ibottaUIKit.shared.offerCellImageContainer()
+            self.addSubview(self.imageViewContainer!)
             NSLayoutConstraint.activate(imageViewContainerConstraints)
         }
     }
@@ -110,7 +118,7 @@ class OfferCell: UICollectionViewCell {
     /// Since this cell can be reused, only initialize `curentValueLabel` if it doesn't already exist
     private func setupCurrentValueLabelIfNeeded() {
         if self.currentValueLabel == nil {
-            currentValueLabel = ibottaUIKit.shared.labelWithStyle(.currentValueInCell, andText: viewModel?.offer.currentValue)
+            currentValueLabel = ibottaUIKit.shared.offerLabelWithStyle(.currentValueInCell)
             self.addSubview(currentValueLabel!)
             NSLayoutConstraint.activate(currentValueLabelConstraints)
         }
@@ -119,9 +127,38 @@ class OfferCell: UICollectionViewCell {
     /// Since this cell can be reused, only initialize  `itemNameLabel` if it doesn't already exist
     private func setupItemNameLabelIfNeeded() {
         if self.itemNameLabel == nil {
-            self.itemNameLabel = ibottaUIKit.shared.labelWithStyle(.itemNameInCell, andText: viewModel?.offer.name)
+            self.itemNameLabel = ibottaUIKit.shared.offerLabelWithStyle(.itemNameInCell)
             self.addSubview(itemNameLabel!)
             NSLayoutConstraint.activate(itemNameLabelConstraints)
+        }
+    }
+    
+    /// Sets the product image
+    /// Initially sets the image to a placeholder
+    /// Looks for a cached version of the image, otherwise retrieves from the image url
+    private func getItemImage() {
+        /// Set placeholder image
+        self.image = ibottaUIKit.shared.offerPlaceholderImage()
+        
+        guard let url = self.viewModel?.offer.url else {
+            return
+        }
+        
+        /// Check for cached image
+        if let image = ApplicationState.cachedImage(fromUrl: url) {
+            self.image = image
+            return
+        }
+        
+        /// Retrieve image from URL
+        Task {
+            do {
+                let image = try await OffersController.retrieveImage(url)
+                self.image = image
+            } catch {
+                self.image = ibottaUIKit.shared.offerPlaceholderImage()
+                print("IMAGE ERROR: \(error)")
+            }
         }
     }
 }

@@ -25,7 +25,7 @@ class OffersCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         self.title = offersCollectionViewModel.title
-        self.offersCollectionViewModel.bindOffers { [weak self] offers in
+        self.offersCollectionViewModel.bindSetOffers { [weak self] offers in
             self?.offers = offers
         }
         
@@ -71,7 +71,7 @@ class OffersCollectionViewController: UICollectionViewController {
             return
         }
         let offerDetailViewController = OfferDetailViewController()
-        offerDetailViewController.offer = selectedOffer
+        offerDetailViewController.viewModel = OfferDetailViewModel(offer: selectedOffer)
         
         self.navigationController?.pushViewController(offerDetailViewController, animated: true)
     }
