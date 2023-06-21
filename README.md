@@ -1,5 +1,9 @@
 # ibotta
 
+**NOTE:** This branch *alternate* has been changed to include an MVVM structure as well as a framework for creating ibotta-specifie UI elements. The original project on the *main* branch was build using an MVC architecture as the functionality in the code challenge only warranted that approach.
+
+My approach to building applications is based on the complexity of the application to be built, therefore, it was originally built with simplicity in mind.
+
 ## Structure
 This application contains no storyboards or nib/xib files. All views (including the initial view) are created programatically.
 
