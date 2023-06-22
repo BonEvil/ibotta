@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10E4C8DBF70D7947A29B7A8C /* Pods_ibotta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B9B723B55FDC59F77795DD /* Pods_ibotta.framework */; };
 		6B4513BE2A43327800323B2F /* OfferCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4513BD2A43327800323B2F /* OfferCellViewModel.swift */; };
 		6B4513C02A433F3400323B2F /* OfferDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4513BF2A433F3400323B2F /* OfferDetailViewModel.swift */; };
 		6B4513C72A4386DE00323B2F /* OffersCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF29ED52A424440002F76AE /* OffersCollectionViewModel.swift */; };
@@ -36,7 +37,6 @@
 		6B90E5812A3665360039055D /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B90E5802A3665360039055D /* NetworkTests.swift */; };
 		6BF29ED62A424440002F76AE /* OffersCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF29ED52A424440002F76AE /* OffersCollectionViewModel.swift */; };
 		6BF29ED82A425476002F76AE /* OffersCollectionViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF29ED72A425476002F76AE /* OffersCollectionViewController+Ext.swift */; };
-		C45F101F254C999992355127 /* Pods_ibotta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B762C3222C98AB24EA3AC6E /* Pods_ibotta.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16FD6646CFF113B5E739CB5D /* Pods-ibotta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ibotta.debug.xcconfig"; path = "Target Support Files/Pods-ibotta/Pods-ibotta.debug.xcconfig"; sourceTree = "<group>"; };
+		16133C0E7B1556B6453CA319 /* Pods-ibotta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ibotta.debug.xcconfig"; path = "Target Support Files/Pods-ibotta/Pods-ibotta.debug.xcconfig"; sourceTree = "<group>"; };
 		6B4513BD2A43327800323B2F /* OfferCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCellViewModel.swift; sourceTree = "<group>"; };
 		6B4513BF2A433F3400323B2F /* OfferDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailViewModel.swift; sourceTree = "<group>"; };
 		6B8006CF2A334A3E00425A9A /* ibotta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ibotta.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,8 +75,8 @@
 		6B90E5802A3665360039055D /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		6BF29ED52A424440002F76AE /* OffersCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersCollectionViewModel.swift; sourceTree = "<group>"; };
 		6BF29ED72A425476002F76AE /* OffersCollectionViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OffersCollectionViewController+Ext.swift"; sourceTree = "<group>"; };
-		7B762C3222C98AB24EA3AC6E /* Pods_ibotta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ibotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC65F369FE1F81D01975930E /* Pods-ibotta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ibotta.release.xcconfig"; path = "Target Support Files/Pods-ibotta/Pods-ibotta.release.xcconfig"; sourceTree = "<group>"; };
+		D1B9B723B55FDC59F77795DD /* Pods_ibotta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ibotta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A36363FC4B4C046CAC0800 /* Pods-ibotta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ibotta.release.xcconfig"; path = "Target Support Files/Pods-ibotta/Pods-ibotta.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C45F101F254C999992355127 /* Pods_ibotta.framework in Frameworks */,
+				10E4C8DBF70D7947A29B7A8C /* Pods_ibotta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 				6B90E5782A36603C0039055D /* ibottaTests */,
 				6B8006D02A334A3E00425A9A /* Products */,
 				9C79AD40A45869684265DB5B /* Pods */,
-				BA583B4550BC2AA3A5AB61D3 /* Frameworks */,
+				84752F77C621BA2BEBDC2AA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,21 +226,21 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		84752F77C621BA2BEBDC2AA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1B9B723B55FDC59F77795DD /* Pods_ibotta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C79AD40A45869684265DB5B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				16FD6646CFF113B5E739CB5D /* Pods-ibotta.debug.xcconfig */,
-				CC65F369FE1F81D01975930E /* Pods-ibotta.release.xcconfig */,
+				16133C0E7B1556B6453CA319 /* Pods-ibotta.debug.xcconfig */,
+				E3A36363FC4B4C046CAC0800 /* Pods-ibotta.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		BA583B4550BC2AA3A5AB61D3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7B762C3222C98AB24EA3AC6E /* Pods_ibotta.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,11 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B8006E32A334A4000425A9A /* Build configuration list for PBXNativeTarget "ibotta" */;
 			buildPhases = (
-				94AFAC88FDDFF379F355F24E /* [CP] Check Pods Manifest.lock */,
+				0BC8734A133EF732C915F912 /* [CP] Check Pods Manifest.lock */,
 				6B8006CB2A334A3E00425A9A /* Sources */,
 				6B8006CC2A334A3E00425A9A /* Frameworks */,
 				6B8006CD2A334A3E00425A9A /* Resources */,
-				869932D23F94E09A97801969 /* [CP] Embed Pods Frameworks */,
+				8FEC65BA2F93EEF89FBB03E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,24 +342,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		869932D23F94E09A97801969 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ibotta/Pods-ibotta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ibotta/Pods-ibotta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ibotta/Pods-ibotta-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		94AFAC88FDDFF379F355F24E /* [CP] Check Pods Manifest.lock */ = {
+		0BC8734A133EF732C915F912 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,6 +362,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FEC65BA2F93EEF89FBB03E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ibotta/Pods-ibotta-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ibotta/Pods-ibotta-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ibotta/Pods-ibotta-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -562,7 +562,7 @@
 		};
 		6B8006E42A334A4000425A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16FD6646CFF113B5E739CB5D /* Pods-ibotta.debug.xcconfig */;
+			baseConfigurationReference = 16133C0E7B1556B6453CA319 /* Pods-ibotta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -595,7 +595,7 @@
 		};
 		6B8006E52A334A4000425A9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC65F369FE1F81D01975930E /* Pods-ibotta.release.xcconfig */;
+			baseConfigurationReference = E3A36363FC4B4C046CAC0800 /* Pods-ibotta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
