@@ -5,6 +5,6 @@ target 'ibotta' do
   use_frameworks!
 
   pod 'BuckarooBanzai', '0.5.1'
-  pod 'ibottaUIKit', :path => '../ibottaUIKit'
+  pod 'ibottaUIKit', '0.0.1'
   
 end
